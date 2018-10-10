@@ -25,7 +25,7 @@ public class RagdollHandler : MonoBehaviour
             if (holder.Joint)
             {
                 holder.Joint.enableCollision = value;
-                holder.Joint.enablePreprocessing = value;
+                //holder.Joint.enablePreprocessing = value;
                 holder.Joint.enableProjection = value;
             }
             if (holder.Body)

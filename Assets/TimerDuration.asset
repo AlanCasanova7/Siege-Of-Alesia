@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47557385534b7b446af16e00a788c0eb, type: 3}
   m_Name: TimerDuration
   m_EditorClassIdentifier: 
-  Value: 3
+  Value: 10
