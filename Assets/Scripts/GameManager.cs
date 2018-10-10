@@ -19,6 +19,16 @@ public class GameManager : ScriptableObject
     private bool isPlayer2Ready;
 
 
+    public void SelectionFinished(Player p)
+    {
+        if (true)//TODO: check if p is player 1
+            isPlayer1Ready = true;
+        else
+            isPlayer2Ready = true;
+
+        if (isPlayer1Ready && isPlayer2Ready)
+            StartFightPhase();
+    }
     public void TimeIsOver()
     {
         if(currentState != FightState.ConfrontState)
