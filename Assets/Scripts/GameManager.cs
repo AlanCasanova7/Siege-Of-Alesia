@@ -18,10 +18,10 @@ public class GameManager : MonoBehaviour
     public UnityEvent FightPhaseStarted;
     public UnityEvent GameOver;
 
-    public FightState currentState { get; private set; }
+    public FightState CurrentState { get; private set; }
 
-    private bool isPlayer1Ready;
-    private bool isPlayer2Ready;
+    public BooleanValue Player1ReadyStatus;
+    public BooleanValue Player2ReadyStatus;
 
     public Player WinningPlayer;
 
@@ -30,14 +30,9 @@ public class GameManager : MonoBehaviour
         this.StartSelectionPhase();
     }
 
-    public void SelectionFinished(Player p)
+    private void Update()
     {
-        if (p.Index == 0)//TODO: check if p is player 1
-            isPlayer1Ready = true;
-        else
-            isPlayer2Ready = true;
-
-        if (isPlayer1Ready && isPlayer2Ready)
+        if (CurrentState == FightState.SelectionPhase && Player1ReadyStatus.Value && Player2ReadyStatus.Value)
             StartFightPhase();
     }
 
@@ -47,12 +42,12 @@ public class GameManager : MonoBehaviour
         GameOver.Invoke();
         Debug.Log("GAME OVER");
         this.enabled = false;
-        currentState = FightState.GameOver;
+        CurrentState = FightState.GameOver;
     }
 
     public void TimeIsOver()
     {
-        if(currentState != FightState.ConfrontState)
+        if (CurrentState != FightState.ConfrontState)
         {
             TimeOver.Invoke();
             StartFightPhase();
@@ -60,7 +55,7 @@ public class GameManager : MonoBehaviour
     }
     public void ConfrontIsOver()
     {
-        if (currentState != FightState.SelectionPhase)
+        if (CurrentState != FightState.SelectionPhase)
         {
             StartSelectionPhase();
         }
@@ -69,15 +64,15 @@ public class GameManager : MonoBehaviour
     private void StartSelectionPhase()
     {
         Debug.Log("Start Selection");
-        currentState = FightState.SelectionPhase;
-        isPlayer1Ready = false;
-        isPlayer2Ready = false;
+        CurrentState = FightState.SelectionPhase;
+        Player1ReadyStatus.Value = false;
+        Player2ReadyStatus.Value = false;
         SelectionPhaseStarted.Invoke();
     }
     private void StartFightPhase()
     {
         Debug.Log("Start Fight");
-        currentState = FightState.ConfrontState;
+        CurrentState = FightState.ConfrontState;
         FightPhaseStarted.Invoke();
     }
 }

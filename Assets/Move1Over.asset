@@ -8,10 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47557385534b7b446af16e00a788c0eb, type: 3}
-  m_Name: TimerDuration
+  m_Script: {fileID: 11500000, guid: 155408d920e6fce42b291b8bcbaa1f16, type: 3}
+  m_Name: Move1Over
   m_EditorClassIdentifier: 
-  Value: 100
-  resetOnCreation: 0
+  Value: 0
+  resetOnCreation: 1
   resetValue: 0
-  description: Max duration of game selection timer
+  description: Object that keeps track of move1 over status

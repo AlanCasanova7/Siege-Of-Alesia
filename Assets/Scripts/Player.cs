@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameManager gameManager;
+    public BooleanValue ReadyStatus;
 
     public int Index;
     [SerializeField]
-    private KeysAttacks[] assignedInputs = new KeysAttacks[4];
+    private KeysAttacks[] assignedInputs = new KeysAttacks[4]; 
 
     public int Population, Fervent;
 
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
                     Debug.Log(Index + " Recorded Input " + ChosenAttacks.Count);
                     if (ChosenAttacks.Count == maxChosenAttacks)
                     {
-                        gameManager.SelectionFinished(this);
+                        ReadyStatus.Value = true;
                     }
                 }
             }

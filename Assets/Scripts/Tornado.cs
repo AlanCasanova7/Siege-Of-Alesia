@@ -12,7 +12,7 @@ public class Tornado : MonoBehaviour
     //- Force 3 is a lift force to make the stuff move up
     //- Force 4 is a centrifugal force to make the stuff move away from the tornado
 
-    private Rigidbody[] bodies;
+    private Rigidbody[] bodies; //TODO: update all prefabs that use citizen, a character joint is missing
 
     public AnimationCurve suctionForceMultiplier;
     public float suctionBasicForce;

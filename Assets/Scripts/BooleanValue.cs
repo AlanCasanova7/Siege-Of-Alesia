@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 [CreateAssetMenu]
-public class FloatValue : ScriptableObject
+public class BooleanValue : ScriptableObject
 {
-    public float Value;
+    public bool Value;
     [SerializeField]
     private bool resetOnCreation = false;
     [SerializeField]
-    private float resetValue = 0.0f;
+    private bool resetValue = false;
     [SerializeField]
     [TextArea(3, 5)]
     private string description;
@@ -20,5 +20,9 @@ public class FloatValue : ScriptableObject
     {
         if (resetOnCreation)
             Value = resetValue;
+    }
+    public void Set(bool value)
+    {
+        Value = value;
     }
 }

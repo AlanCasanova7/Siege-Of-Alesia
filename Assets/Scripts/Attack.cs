@@ -10,7 +10,7 @@ public class Attack : ScriptableObject
 
     public Attack[] winsAgainst;
     //Probably DEBUG ONLY
-    public void FireAttack() //TODO: spawns attack GOs on scene maybe?
+    public void FireAttack(BooleanValue endStatus) //TODO: spawns attack GOs on scene maybe?
     {
         Debug.Log(AttackName);
     }
