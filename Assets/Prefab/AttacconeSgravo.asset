@@ -11,5 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec1c0d5bfc7c8a41bc152cdc3036ff1, type: 3}
   m_Name: AttacconeSgravo
   m_EditorClassIdentifier: 
-  AttackName: 
-  winsAgainst: {fileID: 0}
+  AttackName: Attaccone Sgravo
+  Cost: 10
+  Damage: 20
+  winsAgainst:
+  - {fileID: 11400000, guid: a11e397f38328db4d88f440d758937a1, type: 2}

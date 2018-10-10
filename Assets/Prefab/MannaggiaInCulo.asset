@@ -11,5 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec1c0d5bfc7c8a41bc152cdc3036ff1, type: 3}
   m_Name: MannaggiaInCulo
   m_EditorClassIdentifier: 
-  AttackName: 
-  winsAgainst: {fileID: 0}
+  AttackName: Mannaggia In Culo
+  Cost: 1
+  Damage: 50
+  winsAgainst:
+  - {fileID: 11400000, guid: 6071e38040b30334c923c3123923f789, type: 2}
+  - {fileID: 11400000, guid: 4600934d506bd1347bd40783a198ce12, type: 2}
+  - {fileID: 11400000, guid: a11e397f38328db4d88f440d758937a1, type: 2}

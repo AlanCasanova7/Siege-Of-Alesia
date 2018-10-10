@@ -96,19 +96,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1aee2c14a8c44c4f8b9082ce195e94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  Index: 0
   assignedInputs:
   - Key: 97
-    Attack:
-      AttackName: Ammazateoh
+    Attack: {fileID: 11400000, guid: 6071e38040b30334c923c3123923f789, type: 2}
   - Key: 98
-    Attack:
-      AttackName: BorcoBio!
+    Attack: {fileID: 11400000, guid: 4600934d506bd1347bd40783a198ce12, type: 2}
   - Key: 99
-    Attack:
-      AttackName: Cazzarola
+    Attack: {fileID: 11400000, guid: a11e397f38328db4d88f440d758937a1, type: 2}
   - Key: 100
-    Attack:
-      AttackName: DomaniSiScopa!
+    Attack: {fileID: 11400000, guid: a68ea39f8836ccf4b9008efdf29824b1, type: 2}
+  Population: 0
+  Fervent: 0
+  maxChosenAttacks: 4
+  RecordInput: 0
 --- !u!136 &136963833188141310
 CapsuleCollider:
   m_ObjectHideFlags: 1

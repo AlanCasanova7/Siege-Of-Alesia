@@ -11,5 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec1c0d5bfc7c8a41bc152cdc3036ff1, type: 3}
   m_Name: BOIADIDIO
   m_EditorClassIdentifier: 
-  AttackName: 
-  winsAgainst: {fileID: 0}
+  AttackName: Boia Di Dio
+  Cost: 5
+  Damage: 10
+  winsAgainst:
+  - {fileID: 11400000, guid: a68ea39f8836ccf4b9008efdf29824b1, type: 2}
