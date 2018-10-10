@@ -14,10 +14,13 @@ public class FightManager : MonoBehaviour
         Attack attack2 = Player2.ChosenAttacks.Dequeue();
 
         attack1.ResolveAttack(Player1, Player2, attack2);
-        attack2.ResolveAttack(Player2, Player1, attack1);
+        attack1.FireAttack();
 
-        Debug.Log(Player1.Population);
-        Debug.Log(Player2.Population);
+        attack2.ResolveAttack(Player2, Player1, attack1);
+        attack2.FireAttack();
+
+        Debug.Log("P1: " + Player1.Population);
+        Debug.Log("P2: " + Player2.Population);
 
         if (Player1.Population <= 0)
         {

@@ -17,10 +17,6 @@ public class Player : MonoBehaviour
     public Queue<Attack> ChosenAttacks;
     public bool RecordInput;
 
-    void Awake()
-    {
-        //ChosenAttacks = new Queue<Attack>(4);
-    }
     public void FillEmptyAttackSlots()
     {
         while (ChosenAttacks.Count != maxChosenAttacks)
@@ -54,8 +50,9 @@ public class Player : MonoBehaviour
     {
         if (ChosenAttacks == null)
         {
-            ChosenAttacks = new Queue<Attack>(4);
+            ChosenAttacks = new Queue<Attack>(maxChosenAttacks);
         }
+
         ChosenAttacks.Clear();
         RecordInput = true;
     }
