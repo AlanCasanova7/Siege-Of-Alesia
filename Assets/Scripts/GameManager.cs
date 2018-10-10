@@ -8,16 +8,17 @@ public enum FightState
 {
     SelectionPhase,
     ConfrontState,
+    GameOver,
 }
 
-[CreateAssetMenu]
 public class GameManager : MonoBehaviour
 {
+    public UnityEvent TimeOver;
     public UnityEvent SelectionPhaseStarted;
     public UnityEvent FightPhaseStarted;
     public UnityEvent GameOver;
 
-    private FightState currentState;
+    public FightState currentState { get; private set; }
 
     private bool isPlayer1Ready;
     private bool isPlayer2Ready;
@@ -46,12 +47,14 @@ public class GameManager : MonoBehaviour
         GameOver.Invoke();
         Debug.Log("GAME OVER");
         this.enabled = false;
+        currentState = FightState.GameOver;
     }
 
     public void TimeIsOver()
     {
         if(currentState != FightState.ConfrontState)
         {
+            TimeOver.Invoke();
             StartFightPhase();
         }
     }

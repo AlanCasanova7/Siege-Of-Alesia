@@ -28,6 +28,9 @@ public class FightManager : MonoBehaviour
             GameManager.CallGameOver(Player1);
         }
 
+        if (GameManager.currentState != FightState.ConfrontState)
+            return;
+
         if (Player1.ChosenAttacks.Count == 0)
         {
             GameManager.ConfrontIsOver();

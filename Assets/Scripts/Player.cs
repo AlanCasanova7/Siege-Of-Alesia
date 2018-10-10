@@ -17,12 +17,18 @@ public class Player : MonoBehaviour
     public Queue<Attack> ChosenAttacks;
     public bool RecordInput;
 
-    void Awake () 
+    void Awake()
     {
         //ChosenAttacks = new Queue<Attack>(4);
     }
-	
-	void Update ()
+    public void FillEmptyAttackSlots()
+    {
+        while (ChosenAttacks.Count != maxChosenAttacks)
+        {
+            ChosenAttacks.Enqueue(assignedInputs[UnityEngine.Random.Range(0, assignedInputs.Length)].Attack);
+        }
+    }
+    void Update()
     {
         if (!RecordInput || ChosenAttacks.Count == maxChosenAttacks)
             return;
@@ -35,18 +41,18 @@ public class Player : MonoBehaviour
                 {
                     ChosenAttacks.Enqueue(assignedInputs[i].Attack);
                     Debug.Log(Index + " Recorded Input " + ChosenAttacks.Count);
-                    if(ChosenAttacks.Count == maxChosenAttacks)
+                    if (ChosenAttacks.Count == maxChosenAttacks)
                     {
                         gameManager.SelectionFinished(this);
                     }
                 }
             }
         }
-	}
+    }
 
     public void SwitchToRecordState()
     {
-        if(ChosenAttacks == null)
+        if (ChosenAttacks == null)
         {
             ChosenAttacks = new Queue<Attack>(4);
         }

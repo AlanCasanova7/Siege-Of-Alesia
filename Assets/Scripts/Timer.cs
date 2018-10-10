@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 
     public FloatValue Duration;
 
-    public FloatValue CurrentValue;
+    public FloatValue CurrentTimer;
 
     public bool SpawnAsEnabled = false;
 
@@ -22,22 +22,21 @@ public class Timer : MonoBehaviour
     void OnEnable()
     {
         timer = 0f;
-
-        if (!CurrentValue || !Duration)
+        Debug.Log("Timer restarted");
+        if (!CurrentTimer || !Duration)
             throw new NullReferenceException("Timer requires non null FloatValues references.");
 
-        CurrentValue.Value = timer;
+        CurrentTimer.Value = timer;
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        CurrentValue.Value = timer;
+        CurrentTimer.Value = timer;
 
         if (timer > Duration.Value)
         {
-            this.enabled = false;
             OnTimerFinished.Invoke();
         }
     }
