@@ -2,14 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
+    public int Index;
+    [SerializeField]
+    private KeysAttacks[] assignedInputs = new KeysAttacks[4];
+    [SerializeField]
+    private Population population;
+    [SerializeField]
+    private Fervor fervor;
+    [SerializeField]
+    private int maxChosenAttacks;
+    private Attack[] chosenAttacks;
 
-    public KeysAttacks[] assignedInputs = new KeysAttacks[4];
+    public Attack[] DEBUG_ATTACKS;
 
-	void Start () 
+    void Awake () 
     {
-		
-	}
+        chosenAttacks = new Attack[maxChosenAttacks];
+    }
 	
 	void Update ()
     {
