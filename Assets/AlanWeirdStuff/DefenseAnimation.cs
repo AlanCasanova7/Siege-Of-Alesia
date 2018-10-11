@@ -16,6 +16,8 @@ public class DefenseAnimation : AttackAnimation
 
     public override void FinalAnimation()
     {
+        if (!endAnim)
+            return;
         populationManager.SetForceAll(new Vector3(0, 0, 0), 1000);
         Debug.Log("DIOCANE");
         base.FinalAnimation();

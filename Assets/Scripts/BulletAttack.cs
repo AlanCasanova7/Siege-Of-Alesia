@@ -6,8 +6,10 @@ public class BulletAttack : AttackAnimation
 
     public override void FinalAnimation()
     {
+        if (!endAnim)
+            return;
         base.FinalAnimation();
-        populationManager.SetForceAll(this.transform.up, Force);
+        populationManager.SetForceAll(this.transform.forward, Force);
     }
     //private void OnValidate()
     //{

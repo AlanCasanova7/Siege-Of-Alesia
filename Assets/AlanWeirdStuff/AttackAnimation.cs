@@ -37,6 +37,7 @@ public abstract class AttackAnimation : MonoBehaviour
         {
             endAnim.Value = true;
             this.enabled = false;
+            this.endAnim = null;
         }
     }
     public virtual void StartAnimation()
@@ -46,6 +47,9 @@ public abstract class AttackAnimation : MonoBehaviour
 
     public virtual void FinalAnimation()
     {
+        if (!endAnim)
+            return;
+
         timer = 0f;
 
         this.enabled = true;
