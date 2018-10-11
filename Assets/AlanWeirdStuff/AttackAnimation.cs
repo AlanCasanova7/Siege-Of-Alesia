@@ -15,8 +15,13 @@ public class AttackAnimation : MonoBehaviour
         populationManager = this.GetComponentInChildren<PopulationManager>();
 	}
 
-    public void FireAnimation()
+    public void StartAnimation()
     {
-        populationManager.StartAnimation(regroupPosition);
+        populationManager.StartRegrouping(regroupPosition, this);
+    }
+
+    public virtual void FinalAnimation()
+    {
+        populationManager.SetForceAll(new Vector3(1, 0, 0), 3000);
     }
 }
