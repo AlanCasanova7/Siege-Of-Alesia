@@ -9,8 +9,9 @@ public class CardLogic : MonoBehaviour
     public Image Cover_Image;
     public Image Number_Image;
 
-    public Sprite Sprite;
-
+    public Color ChoosedCardColor;
+    public Color DefaultCardColor;
+    
     public void ShowChoosedCard(Sprite sprite)
     {
         BG_Image.sprite = sprite;
@@ -20,20 +21,14 @@ public class CardLogic : MonoBehaviour
 
     public void ResetCard()
     {
+        BG_Image.color = DefaultCardColor;
         BG_Image.sprite = null;
+        BG_Image.enabled = true;
         Cover_Image.enabled = true;
         Number_Image.enabled = true;
     }
-
-    private void Update()
+    public void CardChoosed()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            ShowChoosedCard(Sprite);
-        }
-        else
-        {
-            ResetCard();
-        }
+        BG_Image.color = ChoosedCardColor;
     }
 }
