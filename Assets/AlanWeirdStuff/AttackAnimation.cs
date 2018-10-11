@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class AttackAnimation : MonoBehaviour
 {
     public Transform[] RegroupPoints;
+    [SerializeField]
     protected Vector3[] regroupPositions;
 
     protected PopulationManager populationManager;
@@ -14,7 +15,7 @@ public abstract class AttackAnimation : MonoBehaviour
     protected BooleanValue endAnim;
     private float timer;
 
-    void Start ()
+    protected virtual void Start ()
     {
         this.enabled = false;
         regroupPositions = new Vector3[RegroupPoints.Length];
