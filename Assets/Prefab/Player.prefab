@@ -117,11 +117,11 @@ MonoBehaviour:
   assignedInputs:
   - Key: 119
     Attack: {fileID: 11400000, guid: 6071e38040b30334c923c3123923f789, type: 2}
-  - Key: 97
-    Attack: {fileID: 11400000, guid: 4600934d506bd1347bd40783a198ce12, type: 2}
-  - Key: 115
-    Attack: {fileID: 11400000, guid: a11e397f38328db4d88f440d758937a1, type: 2}
   - Key: 100
+    Attack: {fileID: 11400000, guid: 4600934d506bd1347bd40783a198ce12, type: 2}
+  - Key: 97
+    Attack: {fileID: 11400000, guid: a11e397f38328db4d88f440d758937a1, type: 2}
+  - Key: 115
     Attack: {fileID: 11400000, guid: a68ea39f8836ccf4b9008efdf29824b1, type: 2}
   Population: {fileID: 11400000, guid: 888582bb10ac7474e85dd2bfaab9c7a5, type: 2}
   Fervor: {fileID: 11400000, guid: abf5f6b63ac991b4699d19fa0aab823a, type: 2}
