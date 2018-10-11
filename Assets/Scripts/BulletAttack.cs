@@ -2,7 +2,7 @@
 public class BulletAttack : AttackAnimation
 {
     //public Vector3 ForceDirection;
-    public float Force = 5f;
+    public float Force = 5000f;
     public override void FinalAnimation()
     {
         base.FinalAnimation();

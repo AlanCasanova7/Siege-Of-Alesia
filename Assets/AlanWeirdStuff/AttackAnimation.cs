@@ -13,7 +13,8 @@ public abstract class AttackAnimation : MonoBehaviour
 
     protected BooleanValue endAnim;
     private float timer;
-	void Start ()
+
+    void Start ()
     {
         this.enabled = false;
         regroupPositions = new Vector3[RegroupPoints.Length];
@@ -41,6 +42,7 @@ public abstract class AttackAnimation : MonoBehaviour
     {
         populationManager.StartRegrouping(regroupPositions);
     }
+
     public virtual void FinalAnimation()
     {
         timer = 0f;

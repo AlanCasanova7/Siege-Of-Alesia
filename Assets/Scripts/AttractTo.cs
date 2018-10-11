@@ -27,8 +27,8 @@ public class AttractTo : MonoBehaviour
         Vector3 directionToCenter = (attractionPoint - this.transform.position).normalized;
         float distance = directionToCenter.magnitude;
         Rigidbody thisRigidBody = this.GetComponent<Rigidbody>();
-        thisRigidBody.velocity = new Vector3(Mathf.Clamp(thisRigidBody.velocity.x, -100, 100), Mathf.Clamp(thisRigidBody.velocity.y, -100, 100), Mathf.Clamp(thisRigidBody.velocity.z, -100, 100));
-        thisRigidBody.AddForce(directionToCenter * distance * 200);
+        thisRigidBody.AddForce(directionToCenter * distance * forceToAttractPoint);
+        thisRigidBody.velocity = new Vector3(Mathf.Clamp(thisRigidBody.velocity.x, -MaxVelocity, MaxVelocity), Mathf.Clamp(thisRigidBody.velocity.y, -MaxVelocity, MaxVelocity), Mathf.Clamp(thisRigidBody.velocity.z, -MaxVelocity, MaxVelocity));
     }
 
     public void SetAttractionPoint(Vector3 attractionPoint, float forceToAttractPoint)
