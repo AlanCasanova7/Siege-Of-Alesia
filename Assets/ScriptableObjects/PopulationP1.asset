@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: PopulationP1
   m_EditorClassIdentifier: 
   min: 0
-  max: 1000
+  max: 200
   value: 1000
   resetOnCreation: 1
   resetValue: 2147483647

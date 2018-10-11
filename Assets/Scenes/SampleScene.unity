@@ -673,6 +673,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114137917084410762, guid: 3de8c19f9949c1a47a09a00790c538ee,
+        type: 2}
+      propertyPath: regroupingFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2059075319}
     - target: {fileID: 114433908979630418, guid: 3de8c19f9949c1a47a09a00790c538ee,
         type: 2}
       propertyPath: InputSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -778,6 +783,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114927157215453034, guid: 0e419d256140a974d8979a9a68fdf82a,
+        type: 2}
+      propertyPath: PopupDuration
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114273842705240398, guid: 0e419d256140a974d8979a9a68fdf82a,
+        type: 2}
+      propertyPath: PopupDuration
+      value: 1.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e419d256140a974d8979a9a68fdf82a, type: 2}
   m_IsPrefabAsset: 0
@@ -866,6 +881,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1627859178 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114273842705240398, guid: 0e419d256140a974d8979a9a68fdf82a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1539740718}
+  m_Script: {fileID: 11500000, guid: 0e67bef26b67b6e4fa949e8034fa2c36, type: 3}
+--- !u!114 &1673210337 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114927157215453034, guid: 0e419d256140a974d8979a9a68fdf82a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1539740718}
+  m_Script: {fileID: 11500000, guid: 0e67bef26b67b6e4fa949e8034fa2c36, type: 3}
 --- !u!1 &1792600162
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,6 +994,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114032858832275624, guid: 43cf2aca1ab4d3d4688199218717541d,
+        type: 2}
+      propertyPath: regroupingFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2059075319}
     - target: {fileID: 114930230102322356, guid: 43cf2aca1ab4d3d4688199218717541d,
         type: 2}
       propertyPath: InputSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1337,6 +1369,10 @@ MonoBehaviour:
   Player2: {fileID: 582778495}
   Attack1EndStatus: {fileID: 11400000, guid: f533c3354b41db746ada60b65a55d82d, type: 2}
   Attack2EndStatus: {fileID: 11400000, guid: 42557c8787299e146b60dd8e426e092e, type: 2}
+  reporter1: {fileID: 1627859178}
+  reporter2: {fileID: 1673210337}
+  result1: {fileID: 11400000, guid: 3861b6dbc1885724c8c396a345929076, type: 2}
+  result2: {fileID: 11400000, guid: 89399a0c734e35845961305d92600a5f, type: 2}
 --- !u!114 &2059075320
 MonoBehaviour:
   m_ObjectHideFlags: 0

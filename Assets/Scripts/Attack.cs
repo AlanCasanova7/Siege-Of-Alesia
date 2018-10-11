@@ -4,12 +4,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Attack")]
 public class Attack : ScriptableObject
 {
-    public GameObject AnimationPrefab;
+    public Fervor FervorValues;
     public Sprite Image;
 
-    public FloatValue FervorMultiplier;
-    public FloatValue DamageMultiplier;
-    public FloatValue RecoveryMultiplier;
+    //public FloatValue FervorMultiplier;
+    //public FloatValue DamageMultiplier;
+    //public FloatValue RecoveryMultiplier;
+
+    public string attName;
 
     public int Cost;
     public int Damage;
@@ -17,28 +19,30 @@ public class Attack : ScriptableObject
 
     public Attack[] winsAgainst;
 
-    public void ResolveAttack(Player attackingPlayer, Player defendingPlayer, Attack otherAttack)
+    public void ResolveAttack(Player attackingPlayer, Player defendingPlayer, Attack otherAttack, FightResult resP1, FightResult resP2)
     {
         int totalCost = this.Cost;
         //reduce recovery cost if fervor is positive
         if (totalCost < 0)
-            totalCost -= (int)(RecoveryMultiplier.Value * totalCost * attackingPlayer.Fervor.Value);
+            totalCost -= (totalCost + FervorValues.RecoverValues[attackingPlayer.Fervor.Value]);
 
         //se mossa corrent aumenta fervore aumenta/riduci costo
         if (Fervor > 0)
         {
-            totalCost = totalCost + (int)(totalCost * FervorMultiplier.Value * attackingPlayer.Fervor.Value);
+            totalCost = totalCost + (int)(totalCost + FervorValues.SelfDmgValues[attackingPlayer.Fervor.Value]);
         }
 
-        attackingPlayer.Population.Value -= totalCost;
+        resP1.SelfDamage = totalCost;
+
+        Debug.LogFormat(attName + " against " + otherAttack.attName);
 
         for (int i = 0; i < winsAgainst.Length; i++)
         {
             int totalDamage = this.Damage;
-            totalDamage = totalDamage + (int)(totalDamage * DamageMultiplier.Value * attackingPlayer.Fervor.Value);
+            totalDamage = totalDamage + (int)(totalDamage + FervorValues.DmgValues[attackingPlayer.Fervor.Value]);
             if (otherAttack == winsAgainst[i])
             {
-                defendingPlayer.Population.Value -= totalDamage;
+                resP2.ReceivedDamage = totalDamage;
             }
         }
     }
