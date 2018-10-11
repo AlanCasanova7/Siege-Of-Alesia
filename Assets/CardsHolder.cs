@@ -22,7 +22,7 @@ public class CardsHolder : MonoBehaviour
     {
         for (int i = 0; i < Cards.Length; i++)
         {
-            Cards[index].ResetCard();
+            Cards[i].ResetCard();
         }
     }
 

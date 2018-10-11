@@ -14,6 +14,7 @@ using UnityEngine;
 public class Attack : ScriptableObject
 {
     public MonoBehaviour AttackAnimation;
+    public Sprite Image;
 
     public FloatValue FervorMultiplier;
     public FloatValue DamageMultiplier;

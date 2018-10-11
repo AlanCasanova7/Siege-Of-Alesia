@@ -3,6 +3,8 @@
 public class IntValue : ScriptableObject
 {
     public int Value { get { return value; } set { this.value = Mathf.Clamp(value, min, max); } }
+    public int Max { get { return max; } }
+    public int Min { get { return min; } }
     [SerializeField]
     private int min;
     [SerializeField]
@@ -24,9 +26,9 @@ public class IntValue : ScriptableObject
         if (resetOnCreation)
             Value = resetValue;
     }
-    private void OnValidate()
-    {
-        if (resetOnCreation)
-            Value = resetValue;
-    }
+    //private void OnValidate()
+    //{
+    //    if (resetOnCreation)
+    //        Value = resetValue;
+    //}
 }

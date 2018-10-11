@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+[System.Serializable]
+public class ImageEvent : UnityEvent<Sprite>
+{
+
+}
 public class FightManager : MonoBehaviour
 {
     public GameManager GameManager;
-    public UnityEvent MoveStarted;
+    public ImageEvent Move1Started;
+    public ImageEvent Move2Started;
     public Player Player1;
     public Player Player2;
     public BooleanValue Attack1EndStatus;
@@ -22,10 +28,11 @@ public class FightManager : MonoBehaviour
             return;
         }
 
-        MoveStarted.Invoke();
-
         Attack attack1 = Player1.ChosenAttacks.Dequeue();
         Attack attack2 = Player2.ChosenAttacks.Dequeue();
+
+        Move1Started.Invoke(attack1.Image);
+        Move2Started.Invoke(attack2.Image);
 
         if (attack1.Fervor != attack2.Fervor)
         {

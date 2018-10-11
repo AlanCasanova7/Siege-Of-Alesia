@@ -21,9 +21,8 @@ public class CardLogic : MonoBehaviour
 
     public void ResetCard()
     {
-        BG_Image.color = DefaultCardColor;
         BG_Image.sprite = null;
-        BG_Image.enabled = true;
+        BG_Image.color = DefaultCardColor;
         Cover_Image.enabled = true;
         Number_Image.enabled = true;
     }

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47557385534b7b446af16e00a788c0eb, type: 3}
   m_Name: TimerDuration
   m_EditorClassIdentifier: 
-  Value: 100
+  Value: 10
   resetOnCreation: 0
   resetValue: 0
   description: Max duration of game selection timer

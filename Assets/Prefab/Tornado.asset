@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec1c0d5bfc7c8a41bc152cdc3036ff1, type: 3}
   m_Name: Tornado
   m_EditorClassIdentifier: 
+  AttackAnimation: {fileID: 0}
+  Image: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   FervorMultiplier: {fileID: 11400000, guid: ddfcb9a178df1584c9555a51a1fe3d74, type: 2}
   DamageMultiplier: {fileID: 11400000, guid: 0b3083b5a45ddeb41ba1f1d5f4fd5024, type: 2}
   RecoveryMultiplier: {fileID: 11400000, guid: 8bb50624120dc3342a322b41a4f3751f, type: 2}

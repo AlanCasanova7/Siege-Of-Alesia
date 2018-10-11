@@ -3,6 +3,8 @@
 public class BooleanValue : ScriptableObject
 {
     public bool Value;
+
+
     [SerializeField]
     private bool resetOnCreation = false;
     [SerializeField]

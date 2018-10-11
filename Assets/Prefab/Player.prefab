@@ -98,23 +98,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputSelected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: ChoosedCardColorMethod
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   ReadyStatus: {fileID: 11400000, guid: d3f0515219e632b4e8190f340b209d8a, type: 2}
   Index: 0
   assignedInputs:
-  - Key: 113
+  - Key: 119
     Attack: {fileID: 11400000, guid: 6071e38040b30334c923c3123923f789, type: 2}
-  - Key: 115
+  - Key: 97
     Attack: {fileID: 11400000, guid: 4600934d506bd1347bd40783a198ce12, type: 2}
-  - Key: 100
+  - Key: 115
     Attack: {fileID: 11400000, guid: a11e397f38328db4d88f440d758937a1, type: 2}
-  - Key: 102
+  - Key: 100
     Attack: {fileID: 11400000, guid: a68ea39f8836ccf4b9008efdf29824b1, type: 2}
   Population: {fileID: 11400000, guid: 888582bb10ac7474e85dd2bfaab9c7a5, type: 2}
   Fervor: {fileID: 11400000, guid: abf5f6b63ac991b4699d19fa0aab823a, type: 2}
-  maxChosenAttacks: 4
+  maxChosenAttacks: 3
   RecordInput: 0
 --- !u!136 &136963833188141310
 CapsuleCollider:
