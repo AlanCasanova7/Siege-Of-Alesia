@@ -75,11 +75,11 @@ public class PopulationManager : MonoBehaviour
         }
     }
 
-    public void RemoveForces()
+    public void Freeze()
     {
         for (int i = 0; i < bodiesToAttract.Length; i++)
         {
-            bodiesToAttract[i].GetComponent<Rigidbody>().velocity = Vector3.zero;
+            bodiesToAttract[i].GetComponent<Rigidbody>().isKinematic = true;
         }
     }
 }

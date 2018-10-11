@@ -18,8 +18,7 @@ public class DefenseAnimation : AttackAnimation
     {
         if (!endAnim)
             return;
-        populationManager.SetForceAll(new Vector3(0, 0, 0), 1000);
-        Debug.Log("DIOCANE");
+        populationManager.Freeze();
         base.FinalAnimation();
     }
 
