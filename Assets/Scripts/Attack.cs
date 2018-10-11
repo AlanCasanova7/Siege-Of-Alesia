@@ -24,12 +24,12 @@ public class Attack : ScriptableObject
         int totalCost = this.Cost;
         //reduce recovery cost if fervor is positive
         if (totalCost < 0)
-            totalCost -= (totalCost + FervorValues.RecoverValues[3 + attackingPlayer.Fervor.Value]);
+            totalCost -= FervorValues.RecoverValues[3 + attackingPlayer.Fervor.Value];
 
         //se mossa corrent aumenta fervore aumenta/riduci costo
         if (Fervor > 0)
         {
-            totalCost = totalCost + (int)(totalCost + FervorValues.SelfDmgValues[3 + attackingPlayer.Fervor.Value]);
+            totalCost = totalCost + FervorValues.SelfDmgValues[3 + attackingPlayer.Fervor.Value];
         }
 
         resP1.SelfDamage = totalCost;
@@ -39,7 +39,7 @@ public class Attack : ScriptableObject
         for (int i = 0; i < winsAgainst.Length; i++)
         {
             int totalDamage = this.Damage;
-            totalDamage = totalDamage + (int)(totalDamage + FervorValues.DmgValues[3 + attackingPlayer.Fervor.Value]);
+            totalDamage = totalDamage + FervorValues.DmgValues[3 + attackingPlayer.Fervor.Value];
             if (otherAttack == winsAgainst[i])
             {
                 resP2.ReceivedDamage = totalDamage;
