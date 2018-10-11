@@ -34,7 +34,6 @@ public class Attack : ScriptableObject
 
         resP1.SelfDamage = totalCost;
 
-        Debug.LogFormat(attName + " against " + otherAttack.attName);
 
         for (int i = 0; i < winsAgainst.Length; i++)
         {
