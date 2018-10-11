@@ -40,26 +40,13 @@ public class FightManager : MonoBehaviour
             Player2.Fervor.Value += attack2.Fervor - attack1.Fervor;
         }
 
-        if (attack1.Fervor < attack2.Fervor)
-        {
-            Attack2EndStatus.Value = false;
-            attack2.ResolveAttack(Player2, Player1, attack1);
-            attack2.FireAttack(Attack2EndStatus);
+        Attack1EndStatus.Value = false;
+        attack1.ResolveAttack(Player1, Player2, attack2);
+        attack1.FireAttack(Attack1EndStatus);
 
-            Attack1EndStatus.Value = false;
-            attack1.ResolveAttack(Player1, Player2, attack2);
-            attack1.FireAttack(Attack1EndStatus);
-        }
-        else
-        {
-            Attack1EndStatus.Value = false;
-            attack1.ResolveAttack(Player1, Player2, attack2);
-            attack1.FireAttack(Attack1EndStatus);
-
-            Attack2EndStatus.Value = false;
-            attack2.ResolveAttack(Player2, Player1, attack1);
-            attack2.FireAttack(Attack2EndStatus);
-        }
+        Attack2EndStatus.Value = false;
+        attack2.ResolveAttack(Player2, Player1, attack1);
+        attack2.FireAttack(Attack2EndStatus);
 
         Debug.Log("P1: " + Player1.Population.Value);
         Debug.Log("P2: " + Player2.Population.Value);

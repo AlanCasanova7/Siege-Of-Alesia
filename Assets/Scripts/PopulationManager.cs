@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class PopulationManager : MonoBehaviour
 {
     public UnityEvent regroupingFinished;
+    public UnityEvent animationFinished;
 
     private AttractTo[] bodiesToAttract;
     private float stageCooldown;
@@ -27,10 +28,6 @@ public class PopulationManager : MonoBehaviour
         if (regrouping)
         {
             stageCooldown -= Time.deltaTime;
-            for (int i = 0; i < bodiesToAttract.Length; i++)
-            {
-                bodiesToAttract[i].SetAttractionPoint(regroupPositions[i % regroupPositions.Length], 200);
-            }
         }
 
         if (stageCooldown <= 0)
@@ -46,6 +43,10 @@ public class PopulationManager : MonoBehaviour
         regrouping = true;
         stageCooldown = 3f;
         animationHandler = owner;
+        for (int i = 0; i < bodiesToAttract.Length; i++)
+        {
+            bodiesToAttract[i].SetAttractionPoint(regroupPositions[i % regroupPositions.Length], 200);
+        }
     }
 
     public void StartRegrouping(Vector3[] regroupPositions, AttackAnimation owner)
@@ -57,6 +58,10 @@ public class PopulationManager : MonoBehaviour
         regrouping = true;
         stageCooldown = 3f;
         animationHandler = owner;
+        for (int i = 0; i < bodiesToAttract.Length; i++)
+        {
+            bodiesToAttract[i].SetAttractionPoint(regroupPositions[i % regroupPositions.Length], 200);
+        }
     }
 
     public void SetForceAll(Vector3 direction, float force)

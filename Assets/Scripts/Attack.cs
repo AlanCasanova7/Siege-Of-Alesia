@@ -1,26 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-
-/*
- Fervore da -3 a 3.
- Aumenta con mossa, quando aumenta l altro diminuisce
- Piu fervore: costo fervore diminuisce e  recovery aumenta
- 
-     
-     
-     */
 [CreateAssetMenu(fileName = "Attack")]
 public class Attack : ScriptableObject
 {
-    public MonoBehaviour AttackAnimation;
+    public GameObject AnimationPrefab;
     public Sprite Image;
 
     public FloatValue FervorMultiplier;
     public FloatValue DamageMultiplier;
     public FloatValue RecoveryMultiplier;
 
-    public string AttackName;
     public int Cost;
     public int Damage;
     public int Fervor;
@@ -29,7 +19,7 @@ public class Attack : ScriptableObject
     //Probably DEBUG ONLY
     public void FireAttack(BooleanValue endStatus) //TODO: spawns attack GOs on scene maybe?
     {
-        Debug.Log(AttackName);
+
     }
 
     public void ResolveAttack(Player attackingPlayer, Player defendingPlayer, Attack otherAttack)
@@ -54,7 +44,6 @@ public class Attack : ScriptableObject
             if (otherAttack == winsAgainst[i])
             {
                 defendingPlayer.Population.Value -= totalDamage;
-                Debug.Log(AttackName + " wins against " + otherAttack.AttackName);
             }
         }
     }

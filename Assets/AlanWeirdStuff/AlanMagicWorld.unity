@@ -829,21 +829,16 @@ MonoBehaviour:
   assignedInputs:
   - Key: 97
     Attack: {fileID: 11400000, guid: e875d7f9fec4c6d47a03756c0b8bce39, type: 2}
-    AttackAnimation: {fileID: 0}
   - Key: 98
     Attack: {fileID: 11400000, guid: 4600934d506bd1347bd40783a198ce12, type: 2}
-    AttackAnimation: {fileID: 0}
   - Key: 99
     Attack: {fileID: 11400000, guid: a11e397f38328db4d88f440d758937a1, type: 2}
-    AttackAnimation: {fileID: 0}
   - Key: 100
     Attack: {fileID: 11400000, guid: a68ea39f8836ccf4b9008efdf29824b1, type: 2}
-    AttackAnimation: {fileID: 0}
   Population: {fileID: 0}
   Fervor: {fileID: 0}
   maxChosenAttacks: 4
   RecordInput: 0
-  PopulationManager: {fileID: 0}
 --- !u!1001 &228138617
 Prefab:
   m_ObjectHideFlags: 0
@@ -6145,6 +6140,22 @@ MonoBehaviour:
   regroupingFinished:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  animationFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: f533c3354b41db746ada60b65a55d82d, type: 2}
+        m_MethodName: Set
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1751434569
