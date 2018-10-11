@@ -16,11 +16,6 @@ public class Attack : ScriptableObject
     public int Fervor;
 
     public Attack[] winsAgainst;
-    //Probably DEBUG ONLY
-    public void FireAttack(BooleanValue endStatus) //TODO: spawns attack GOs on scene maybe?
-    {
-
-    }
 
     public void ResolveAttack(Player attackingPlayer, Player defendingPlayer, Attack otherAttack)
     {

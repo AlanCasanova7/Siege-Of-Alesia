@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class AttractTo : MonoBehaviour
 {
-    public float MaxVelocity;
-    public Transform transformToGoTo;
+    public float MaxVelocity = 5f;
+    //public Transform transformToGoTo;
 
     private Vector3 attractionPoint;
     private float forceToAttractPoint;
@@ -14,8 +14,8 @@ public class AttractTo : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        attractionPoint = transformToGoTo.position;
-        SetAttractionPoint(attractionPoint, 2000f);
+        //attractionPoint = transformToGoTo.position;
+        //SetAttractionPoint(attractionPoint, 2000f);
     }
 
     // Update is called once per frame

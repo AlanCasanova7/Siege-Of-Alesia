@@ -18,13 +18,17 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int maxChosenAttacks;
     public Queue<Attack> ChosenAttacks;
+    public Queue<AttackAnimation> ChosenAttacksAnim;
     public bool RecordInput;
 
     public void FillEmptyAttackSlots()
     {
         while (ChosenAttacks.Count != maxChosenAttacks)
         {
-            ChosenAttacks.Enqueue(assignedInputs[UnityEngine.Random.Range(0, assignedInputs.Length)].Attack);
+            KeysAttacks att = assignedInputs[UnityEngine.Random.Range(0, assignedInputs.Length)];
+            ChosenAttacks.Enqueue(att.Attack);
+            ChosenAttacksAnim.Enqueue(att.AnimationManager);
+            InputSelected.Invoke();
         }
     }
     void Update()
@@ -39,7 +43,7 @@ public class Player : MonoBehaviour
                 if (Input.GetKeyDown(assignedInputs[i].Key))
                 {
                     ChosenAttacks.Enqueue(assignedInputs[i].Attack);
-                    Debug.Log(Index + " Recorded Input " + ChosenAttacks.Count);
+                    ChosenAttacksAnim.Enqueue(assignedInputs[i].AnimationManager);
                     InputSelected.Invoke();
                     if (ChosenAttacks.Count == maxChosenAttacks)
                     {
@@ -55,6 +59,7 @@ public class Player : MonoBehaviour
         if (ChosenAttacks == null)
         {
             ChosenAttacks = new Queue<Attack>(maxChosenAttacks);
+            ChosenAttacksAnim = new Queue<AttackAnimation>(maxChosenAttacks);
         }
 
         ChosenAttacks.Clear();

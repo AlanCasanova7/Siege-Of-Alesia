@@ -2,26 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackAnimation : MonoBehaviour
+public abstract class AttackAnimation : MonoBehaviour
 {
-    public Transform RegroupPoint;
-    private Vector3 regroupPosition;
+    public Transform[] RegroupPoints;
+    protected Vector3[] regroupPositions;
 
-    private PopulationManager populationManager;
+    protected PopulationManager populationManager;
+    [SerializeField]
+    protected float finalTime = 3f;
 
+    protected BooleanValue endAnim;
+    private float timer;
 	void Start ()
     {
-        regroupPosition = RegroupPoint.position;
+        this.enabled = false;
+        regroupPositions = new Vector3[RegroupPoints.Length];
+        for (int i = 0; i < RegroupPoints.Length; i++)
+        {
+            regroupPositions[i] = RegroupPoints[i].position;
+        }
         populationManager = this.GetComponentInChildren<PopulationManager>();
 	}
-
-    public void StartAnimation()
+    public void StartAnimation(BooleanValue endAnim)
     {
-        populationManager.StartRegrouping(regroupPosition, this);
+        this.endAnim = endAnim;
+        StartAnimation();
     }
-
+    protected virtual void Update()
+    {
+        timer += Time.deltaTime;
+        if(timer > finalTime)
+        {
+            endAnim.Value = true;
+            this.enabled = false;
+        }
+    }
+    public virtual void StartAnimation()
+    {
+        populationManager.StartRegrouping(regroupPositions);
+    }
     public virtual void FinalAnimation()
     {
-        populationManager.SetForceAll(new Vector3(1, 0, 0), 3000);
+        timer = 0f;
+
+        this.enabled = true;
     }
 }

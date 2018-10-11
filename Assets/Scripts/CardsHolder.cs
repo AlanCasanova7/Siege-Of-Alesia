@@ -24,6 +24,7 @@ public class CardsHolder : MonoBehaviour
         {
             Cards[i].ResetCard();
         }
+        index = 0;
     }
 
     public void ChoosedCardColorMethod()

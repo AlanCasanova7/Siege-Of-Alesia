@@ -7,19 +7,17 @@ using UnityEngine.Events;
 public class PopulationManager : MonoBehaviour
 {
     public UnityEvent regroupingFinished;
-    public UnityEvent animationFinished;
 
     private AttractTo[] bodiesToAttract;
-    private float stageCooldown;
+    public float stageCooldown = 2f;
     private bool regrouping;
 
-    private Vector3[] regroupPositions;
-    private AttackAnimation animationHandler;
+    //private Vector3[] regroupPositions;
+    //private AttackAnimation animationHandler;
 
     void Start()
     {
         bodiesToAttract = this.GetComponentsInChildren<AttractTo>();
-        stageCooldown = 2f;
         regrouping = false;
     }
 
@@ -28,36 +26,41 @@ public class PopulationManager : MonoBehaviour
         if (regrouping)
         {
             stageCooldown -= Time.deltaTime;
+            if (stageCooldown <= 0)
+            {
+                regrouping = false;
+                //animationHandler.FinalAnimation();
+                regroupingFinished.Invoke();
+                for (int i = 0; i < bodiesToAttract.Length; i++)
+                {
+                    bodiesToAttract[i].StopAttracting();
+                }
+            }
         }
 
-        if (stageCooldown <= 0)
-        {
-            regrouping = false;
-            animationHandler.FinalAnimation();
-        }
     }
 
-    public void StartRegrouping(Vector3 regroupPosition, AttackAnimation owner)
-    {
-        this.regroupPositions[0] = regroupPosition;
-        regrouping = true;
-        stageCooldown = 3f;
-        animationHandler = owner;
-        for (int i = 0; i < bodiesToAttract.Length; i++)
-        {
-            bodiesToAttract[i].SetAttractionPoint(regroupPositions[i % regroupPositions.Length], 200);
-        }
-    }
+    //public void StartRegrouping(Vector3 regroupPosition, AttackAnimation owner)
+    //{
+    //    this.regroupPositions[0] = regroupPosition;
+    //    regrouping = true;
+    //    stageCooldown = 3f;
+    //    animationHandler = owner;
+    //    for (int i = 0; i < bodiesToAttract.Length; i++)
+    //    {
+    //        bodiesToAttract[i].SetAttractionPoint(regroupPositions[i % regroupPositions.Length], 200);
+    //    }
+    //}
 
-    public void StartRegrouping(Vector3[] regroupPositions, AttackAnimation owner)
+    public void StartRegrouping(Vector3[] regroupPositions)
     {
-        for (int i = 0; i < regroupPositions.Length; i++)
-        {
-            this.regroupPositions[i] = regroupPositions[i];
-        }
+        //for (int i = 0; i < regroupPositions.Length; i++)
+        //{
+        //    this.regroupPositions[i] = regroupPositions[i];
+        //}
         regrouping = true;
         stageCooldown = 3f;
-        animationHandler = owner;
+        //animationHandler = owner;
         for (int i = 0; i < bodiesToAttract.Length; i++)
         {
             bodiesToAttract[i].SetAttractionPoint(regroupPositions[i % regroupPositions.Length], 200);

@@ -5,4 +5,5 @@ public class KeysAttacks
 {
     public KeyCode Key;
     public Attack Attack;
+    public AttackAnimation AnimationManager;
 }
