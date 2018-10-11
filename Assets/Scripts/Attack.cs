@@ -13,6 +13,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Attack")]
 public class Attack : ScriptableObject
 {
+    public MonoBehaviour AttackAnimation;
+
     public FloatValue FervorMultiplier;
     public FloatValue DamageMultiplier;
     public FloatValue RecoveryMultiplier;
