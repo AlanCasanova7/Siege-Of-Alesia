@@ -26,6 +26,6 @@ public class PopulationBar : MonoBehaviour
     {
         loadingBar.fillAmount = (Current.Value <= 0 ? 0 : Current.Value / (float)Current.Max);
         if (loadValText)
-            loadValText.text = ((int)(loadingBar.fillAmount * Current.Max)).ToString("") + " / " + Current.Max;
+            loadValText.text = (Current.Value).ToString() + " / " + Current.Max;
     }
 }

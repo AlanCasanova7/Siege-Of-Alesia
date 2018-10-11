@@ -17,5 +17,4 @@ MonoBehaviour:
   Cost: 2
   Damage: 0
   Fervor: 0
-  winsAgainst:
-  - {fileID: 11400000, guid: 6071e38040b30334c923c3123923f789, type: 2}
+  winsAgainst: []

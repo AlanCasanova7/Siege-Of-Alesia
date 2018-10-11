@@ -1073,7 +1073,7 @@ MonoBehaviour:
   SelfInflictedDamage: {r: 0, g: 0, b: 1, a: 1}
   ReceivedDamage: {r: 1, g: 0, b: 0, a: 1}
   PopulationRecovered: {r: 0, g: 1, b: 0, a: 1}
-  PopupDuration: 1.2
+  PopupDuration: 2.5
 --- !u!114 &114275683452908866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1095,11 +1095,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1609,11 +1609,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 300
     m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1953,7 +1953,7 @@ MonoBehaviour:
   SelfInflictedDamage: {r: 0, g: 0, b: 1, a: 1}
   ReceivedDamage: {r: 1, g: 0, b: 0, a: 1}
   PopulationRecovered: {r: 0, g: 1, b: 0, a: 1}
-  PopupDuration: 1.5
+  PopupDuration: 2.5
 --- !u!114 &114938173331989562
 MonoBehaviour:
   m_ObjectHideFlags: 1

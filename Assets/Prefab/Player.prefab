@@ -4224,7 +4224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RegroupPoints:
   - {fileID: 4845081463933652}
-  finalTime: 3
+  finalTime: 5
   Force: 3000
 --- !u!114 &114930230102322356
 MonoBehaviour:
