@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AttractInside : MonoBehaviour
 {
+    public Transform tr;
+
     private Rigidbody[] bodies;
     public bool CollectingBodies;
 
@@ -40,14 +42,20 @@ public class AttractInside : MonoBehaviour
 
     public void CollectBodies()
     {
-        Vector3 pos = this.transform.position;
+        Vector3 pos;
+        if (tr = null)
+        {
+            pos = this.transform.position;
+        }
+        else
+            pos = this.tr.position;
 
         for (int i = 0; i < bodies.Length; i++)
         {
             Vector3 directionToCenter = (pos - bodies[i].transform.position).normalized;
             float distance = directionToCenter.magnitude;
-            bodies[i].velocity = new Vector3(Mathf.Clamp(bodies[i].velocity.x, -100, 100), Mathf.Clamp(bodies[i].velocity.y, -100, 100), Mathf.Clamp(bodies[i].velocity.z, -100, 100));
             bodies[i].AddForce(directionToCenter * distance * 200);
+            bodies[i].velocity = new Vector3(Mathf.Clamp(bodies[i].velocity.x, -100, 100), Mathf.Clamp(bodies[i].velocity.y, -100, 100), Mathf.Clamp(bodies[i].velocity.z, -100, 100));
         }
     }
 
