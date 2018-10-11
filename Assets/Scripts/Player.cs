@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    public UnityEvent InputSelected;
     public BooleanValue ReadyStatus;
 
     public int Index;
     [SerializeField]
     private KeysAttacks[] assignedInputs = new KeysAttacks[4]; 
 
-    public int Population, Fervent;
+    public IntValue Population;
+    public IntValue Fervor;
 
     [SerializeField]
     private int maxChosenAttacks;
@@ -37,6 +40,7 @@ public class Player : MonoBehaviour
                 {
                     ChosenAttacks.Enqueue(assignedInputs[i].Attack);
                     Debug.Log(Index + " Recorded Input " + ChosenAttacks.Count);
+                    InputSelected.Invoke();
                     if (ChosenAttacks.Count == maxChosenAttacks)
                     {
                         ReadyStatus.Value = true;

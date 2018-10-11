@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1466350736765088}
+  m_RootGameObject: {fileID: 1217582967534636}
   m_IsPrefabAsset: 1
---- !u!1 &1466350736765088
+--- !u!1 &1217582967534636
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4845081463933652}
-  - component: {fileID: 33558326519975798}
-  - component: {fileID: 23652165196475554}
-  - component: {fileID: 136963833188141310}
-  - component: {fileID: 114930230102322356}
+  - component: {fileID: 4682550915671026}
+  - component: {fileID: 33685068433635714}
+  - component: {fileID: 23652058887152650}
+  - component: {fileID: 136467863110985080}
+  - component: {fileID: 114433908979630418}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4845081463933652
+--- !u!4 &4682550915671026
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466350736765088}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7399998, y: 1, z: 0}
+  m_GameObject: {fileID: 1217582967534636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.21, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23652165196475554
+--- !u!23 &23652058887152650
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466350736765088}
+  m_GameObject: {fileID: 1217582967534636}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -78,19 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33558326519975798
+--- !u!33 &33685068433635714
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466350736765088}
+  m_GameObject: {fileID: 1217582967534636}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114930230102322356
+--- !u!114 &114433908979630418
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466350736765088}
+  m_GameObject: {fileID: 1217582967534636}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1aee2c14a8c44c4f8b9082ce195e94b, type: 3}
@@ -101,8 +101,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  ReadyStatus: {fileID: 11400000, guid: d3f0515219e632b4e8190f340b209d8a, type: 2}
-  Index: 0
+  ReadyStatus: {fileID: 11400000, guid: e1b064339f88ce44db11aa3847c24542, type: 2}
+  Index: 1
   assignedInputs:
   - Key: 113
     Attack: {fileID: 11400000, guid: 6071e38040b30334c923c3123923f789, type: 2}
@@ -112,16 +112,16 @@ MonoBehaviour:
     Attack: {fileID: 11400000, guid: a11e397f38328db4d88f440d758937a1, type: 2}
   - Key: 102
     Attack: {fileID: 11400000, guid: a68ea39f8836ccf4b9008efdf29824b1, type: 2}
-  Population: {fileID: 11400000, guid: 888582bb10ac7474e85dd2bfaab9c7a5, type: 2}
-  Fervor: {fileID: 11400000, guid: abf5f6b63ac991b4699d19fa0aab823a, type: 2}
+  Population: {fileID: 11400000, guid: 4b16a8c78090cd04589243ab180e1815, type: 2}
+  Fervor: {fileID: 11400000, guid: 8989223618cc7664885f337e807f264d, type: 2}
   maxChosenAttacks: 4
   RecordInput: 0
---- !u!136 &136963833188141310
+--- !u!136 &136467863110985080
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466350736765088}
+  m_GameObject: {fileID: 1217582967534636}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

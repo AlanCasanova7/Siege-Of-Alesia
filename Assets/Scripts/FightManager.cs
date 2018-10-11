@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class FightManager : MonoBehaviour
 {
     public GameManager GameManager;
+    public UnityEvent MoveStarted;
     public Player Player1;
     public Player Player2;
     public BooleanValue Attack1EndStatus;
@@ -21,26 +22,46 @@ public class FightManager : MonoBehaviour
             return;
         }
 
+        MoveStarted.Invoke();
 
         Attack attack1 = Player1.ChosenAttacks.Dequeue();
         Attack attack2 = Player2.ChosenAttacks.Dequeue();
 
-        Attack1EndStatus.Value = false;
-        attack1.ResolveAttack(Player1, Player2, attack2);
-        attack1.FireAttack(Attack1EndStatus);
+        if (attack1.Fervor != attack2.Fervor)
+        {
+            Player1.Fervor.Value += attack1.Fervor - attack2.Fervor;
+            Player2.Fervor.Value += attack2.Fervor - attack1.Fervor;
+        }
 
-        Attack2EndStatus.Value = false;
-        attack2.ResolveAttack(Player2, Player1, attack1);
-        attack2.FireAttack(Attack2EndStatus);
+        if (attack1.Fervor < attack2.Fervor)
+        {
+            Attack2EndStatus.Value = false;
+            attack2.ResolveAttack(Player2, Player1, attack1);
+            attack2.FireAttack(Attack2EndStatus);
 
-        Debug.Log("P1: " + Player1.Population);
-        Debug.Log("P2: " + Player2.Population);
+            Attack1EndStatus.Value = false;
+            attack1.ResolveAttack(Player1, Player2, attack2);
+            attack1.FireAttack(Attack1EndStatus);
+        }
+        else
+        {
+            Attack1EndStatus.Value = false;
+            attack1.ResolveAttack(Player1, Player2, attack2);
+            attack1.FireAttack(Attack1EndStatus);
 
-        if (Player1.Population <= 0)
+            Attack2EndStatus.Value = false;
+            attack2.ResolveAttack(Player2, Player1, attack1);
+            attack2.FireAttack(Attack2EndStatus);
+        }
+
+        Debug.Log("P1: " + Player1.Population.Value);
+        Debug.Log("P2: " + Player2.Population.Value);
+
+        if (Player1.Population.Value <= 0)
         {
             GameManager.CallGameOver(Player2);
         }
-        if (Player2.Population <= 0)
+        if (Player2.Population.Value <= 0)
         {
             GameManager.CallGameOver(Player1);
         }

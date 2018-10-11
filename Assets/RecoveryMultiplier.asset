@@ -8,11 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dec1c0d5bfc7c8a41bc152cdc3036ff1, type: 3}
-  m_Name: BOIADIDIO
+  m_Script: {fileID: 11500000, guid: 47557385534b7b446af16e00a788c0eb, type: 3}
+  m_Name: RecoveryMultiplier
   m_EditorClassIdentifier: 
-  AttackName: Boia Di Dio
-  Cost: 5
-  Damage: 10
-  winsAgainst:
-  - {fileID: 11400000, guid: a68ea39f8836ccf4b9008efdf29824b1, type: 2}
+  Value: 0.2
+  resetOnCreation: 0
+  resetValue: 0.2
+  description: Percentage used with the player fervor to increase/decrease the recovery
+    received
