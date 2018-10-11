@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec1c0d5bfc7c8a41bc152cdc3036ff1, type: 3}
+  m_Name: AttackAlan
+  m_EditorClassIdentifier: 
+  FervorMultiplier: {fileID: 11400000, guid: ddfcb9a178df1584c9555a51a1fe3d74, type: 2}
+  DamageMultiplier: {fileID: 11400000, guid: 0b3083b5a45ddeb41ba1f1d5f4fd5024, type: 2}
+  RecoveryMultiplier: {fileID: 11400000, guid: 8bb50624120dc3342a322b41a4f3751f, type: 2}
+  AttackName: Ammazzate Oh!
+  Cost: 5
+  Damage: 20
+  Fervor: 0
+  winsAgainst:
+  - {fileID: 11400000, guid: a11e397f38328db4d88f440d758937a1, type: 2}
+  - {fileID: 11400000, guid: 4600934d506bd1347bd40783a198ce12, type: 2}
