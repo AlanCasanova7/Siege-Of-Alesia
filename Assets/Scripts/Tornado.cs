@@ -23,7 +23,7 @@ public class Tornado : MonoBehaviour
     public AnimationCurve centrifugalForceMultiplier;
     public float centrifugalBasicForce;
 
-    public float maxSqrDistance;
+    public float maxDistance;
     //public AnimationCurve suctionForceMultiplier;
     //public AnimationCurve suctionForceMultiplier;
 
@@ -41,13 +41,16 @@ public class Tornado : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 pos = this.transform.position;
+        float inverseMaxDistanceSqr = 1f / (maxDistance * maxDistance);
 
         for (int i = 0; i < bodies.Length; i++)
         {
-            Vector3 directionToCenter = pos - bodies[i].transform.position;
+            Rigidbody body = bodies[i];
+            Vector3 directionToCenter = pos - body.transform.position;
             float distance = directionToCenter.sqrMagnitude;
+            Vector3 direction = directionToCenter.normalized;
 
-            float evaluation = distance / maxSqrDistance;
+            float evaluation = distance * inverseMaxDistanceSqr;
 
             float suctionMultiplier = suctionForceMultiplier.Evaluate(evaluation);
             float liftMultiplier = liftForceMultiplier.Evaluate(evaluation);
@@ -55,15 +58,15 @@ public class Tornado : MonoBehaviour
 
             Vector3 finalForce = Vector3.zero;
 
-            finalForce += directionToCenter.normalized * suctionMultiplier * suctionBasicForce;
+            finalForce += direction * suctionMultiplier * suctionBasicForce;
             finalForce += this.transform.up * liftMultiplier * liftBasicForce;
-            finalForce -= directionToCenter.normalized * centrifugalBasicForce * centrifugalMultiplier;
+            finalForce -= direction * centrifugalBasicForce * centrifugalMultiplier;
 
             Quaternion q = Quaternion.AngleAxis(10, new Vector3(0, 1, 0));
-            bodies[i].MovePosition(q * (bodies[i].transform.position - this.transform.position) + this.transform.position);
-            bodies[i].MoveRotation(bodies[i].transform.rotation * q);
+            body.MovePosition(q * (-directionToCenter) + pos);
+            body.MoveRotation(body.transform.rotation * q);
 
-            bodies[i].AddForce(finalForce);
+            body.AddForce(finalForce);
         }
 
         //Vector3 suctionForceV = 
