@@ -13937,9 +13937,7 @@ MonoBehaviour:
   SoundsStarts:
   - {fileID: 8300000, guid: 04b3a3afa909e5942a72d8650b8fb640, type: 3}
   - {fileID: 8300000, guid: 6db11dc74946f3e4c8987df1ae3f69d6, type: 3}
-  SoundsEnd:
-  - {fileID: 8300000, guid: 6db11dc74946f3e4c8987df1ae3f69d6, type: 3}
-  - {fileID: 8300000, guid: 04b3a3afa909e5942a72d8650b8fb640, type: 3}
+  SoundsEnd: []
   Source: {fileID: 564068942}
   OnGroupingEffect: {fileID: 1034815551}
   OnFinalAnimEffect: {fileID: 0}
@@ -20403,9 +20401,7 @@ MonoBehaviour:
   SoundsStarts:
   - {fileID: 8300000, guid: 04b3a3afa909e5942a72d8650b8fb640, type: 3}
   - {fileID: 8300000, guid: 6db11dc74946f3e4c8987df1ae3f69d6, type: 3}
-  SoundsEnd:
-  - {fileID: 8300000, guid: 04b3a3afa909e5942a72d8650b8fb640, type: 3}
-  - {fileID: 8300000, guid: 6db11dc74946f3e4c8987df1ae3f69d6, type: 3}
+  SoundsEnd: []
   Source: {fileID: 1004980811}
   OnGroupingEffect: {fileID: 1603680533}
   OnFinalAnimEffect: {fileID: 0}
