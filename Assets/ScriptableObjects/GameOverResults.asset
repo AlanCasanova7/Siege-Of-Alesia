@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1ddb11d2d56d04e931971be73e3881, type: 3}
   m_Name: GameOverResults
   m_EditorClassIdentifier: 
-  IndexWinner: -1
+  IndexWinner: 0
   FervorWinner: 0
   PopulationWinner: 0
-  TotalGameTurns: 0
+  TotalGameTurns: 1
   TotalTime: 0
