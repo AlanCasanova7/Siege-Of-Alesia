@@ -1601,8 +1601,8 @@ MonoBehaviour:
   BG_Image: {fileID: 1562837251}
   Cover_Image: {fileID: 513357898}
   Number_Image: {fileID: 1352680868}
-  ChoosedCardColor: {r: 0, g: 0, b: 0, a: 0}
-  DefaultCardColor: {r: 0, g: 0, b: 0, a: 0}
+  ChoosedCardColor: {r: 0.087417364, g: 1, b: 0, a: 1}
+  DefaultCardColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &104968520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,8 +2712,8 @@ MonoBehaviour:
   BG_Image: {fileID: 2055679839}
   Cover_Image: {fileID: 1777655920}
   Number_Image: {fileID: 1998961829}
-  ChoosedCardColor: {r: 0, g: 0, b: 0, a: 0}
-  DefaultCardColor: {r: 0, g: 0, b: 0, a: 0}
+  ChoosedCardColor: {r: 0.087417364, g: 1, b: 0, a: 1}
+  DefaultCardColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &188695122
 Prefab:
   m_ObjectHideFlags: 0
@@ -6348,8 +6348,8 @@ MonoBehaviour:
   BG_Image: {fileID: 1618620080}
   Cover_Image: {fileID: 142654763}
   Number_Image: {fileID: 941000752}
-  ChoosedCardColor: {r: 0, g: 0, b: 0, a: 0}
-  DefaultCardColor: {r: 0, g: 0, b: 0, a: 0}
+  ChoosedCardColor: {r: 0.087417364, g: 1, b: 0, a: 1}
+  DefaultCardColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &400983392
 Prefab:
   m_ObjectHideFlags: 0
@@ -6807,8 +6807,8 @@ MonoBehaviour:
   BG_Image: {fileID: 660891028}
   Cover_Image: {fileID: 375010987}
   Number_Image: {fileID: 457091348}
-  ChoosedCardColor: {r: 0, g: 0, b: 0, a: 0}
-  DefaultCardColor: {r: 0, g: 0, b: 0, a: 0}
+  ChoosedCardColor: {r: 0.087417364, g: 1, b: 0, a: 1}
+  DefaultCardColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &423257847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21959,8 +21959,8 @@ MonoBehaviour:
   BG_Image: {fileID: 895719937}
   Cover_Image: {fileID: 825176767}
   Number_Image: {fileID: 1980214700}
-  ChoosedCardColor: {r: 0, g: 0, b: 0, a: 0}
-  DefaultCardColor: {r: 0, g: 0, b: 0, a: 0}
+  ChoosedCardColor: {r: 0.087417364, g: 1, b: 0, a: 1}
+  DefaultCardColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1379314203
 Prefab:
   m_ObjectHideFlags: 0
@@ -26873,8 +26873,8 @@ MonoBehaviour:
   BG_Image: {fileID: 1725485075}
   Cover_Image: {fileID: 59958893}
   Number_Image: {fileID: 1411305434}
-  ChoosedCardColor: {r: 0, g: 0, b: 0, a: 0}
-  DefaultCardColor: {r: 0, g: 0, b: 0, a: 0}
+  ChoosedCardColor: {r: 0.087417364, g: 1, b: 0, a: 1}
+  DefaultCardColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1757078211
 Prefab:
   m_ObjectHideFlags: 0
