@@ -6,11 +6,14 @@ public class BulletAttack : AttackAnimation
 
     public override void FinalAnimation()
     {
+        Debug.Log("ATTACK");
+
         if (!endAnim)
             return;
         base.FinalAnimation();
 
         populationManager.SetForceAll(this.target.position - this.regroupPositions[0], Force);
+
     }
     //private void OnValidate()
     //{
