@@ -6,6 +6,9 @@ public abstract class AttackAnimation : MonoBehaviour
 {
     public string triggerName;
 
+    public ParticleSystem OnGroupingEffect;
+    public ParticleSystem OnFinalAnimEffect;
+
     public Transform[] RegroupPoints;
     [SerializeField]
     protected Vector3[] regroupPositions;
@@ -17,7 +20,7 @@ public abstract class AttackAnimation : MonoBehaviour
     protected BooleanValue endAnim;
     private float timer;
 
-    protected virtual void Start ()
+    protected virtual void Start()
     {
         this.enabled = false;
         regroupPositions = new Vector3[RegroupPoints.Length];
@@ -26,7 +29,7 @@ public abstract class AttackAnimation : MonoBehaviour
             regroupPositions[i] = RegroupPoints[i].position;
         }
         populationManager = this.GetComponentInChildren<PopulationManager>();
-	}
+    }
     public void StartAnimation(BooleanValue endAnim)
     {
         this.endAnim = endAnim;
@@ -35,7 +38,7 @@ public abstract class AttackAnimation : MonoBehaviour
     protected virtual void Update()
     {
         timer += Time.deltaTime;
-        if(timer > finalTime)
+        if (timer > finalTime)
         {
             endAnim.Value = true;
             this.enabled = false;
@@ -45,12 +48,16 @@ public abstract class AttackAnimation : MonoBehaviour
     public virtual void StartAnimation()
     {
         populationManager.StartRegrouping(regroupPositions);
+        if (OnGroupingEffect)
+            OnGroupingEffect.Play();
     }
 
     public virtual void FinalAnimation()
     {
         if (!endAnim)
             return;
+        if (OnFinalAnimEffect)
+            OnFinalAnimEffect.Play();
 
         timer = 0f;
 

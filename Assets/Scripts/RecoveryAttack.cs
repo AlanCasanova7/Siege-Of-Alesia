@@ -5,6 +5,8 @@ public class RecoveryAttack : AttackAnimation
     public float MaxVelocityForForceApplication;
     public override void StartAnimation()
     {
+        if (OnGroupingEffect)
+            OnGroupingEffect.Play();
         populationManager.StartFakeRegrouping();
     }
     protected override void Update()
