@@ -51,7 +51,11 @@ public class PopulationManager : MonoBehaviour
     //        bodiesToAttract[i].SetAttractionPoint(regroupPositions[i % regroupPositions.Length], 200);
     //    }
     //}
-
+    public void StartFakeRegrouping()
+    {
+        regrouping = true;
+        stageCooldown = 3f;
+    }
     public void StartRegrouping(Vector3[] regroupPositions, float regroupForce = 200)
     {
         //for (int i = 0; i < regroupPositions.Length; i++)
@@ -63,6 +67,7 @@ public class PopulationManager : MonoBehaviour
         //animationHandler = owner;
         for (int i = 0; i < bodiesToAttract.Length; i++)
         {
+
             bodiesToAttract[i].SetAttractionPoint(regroupPositions[i % regroupPositions.Length], regroupForce);
         }
     }
@@ -74,7 +79,15 @@ public class PopulationManager : MonoBehaviour
             bodiesToAttract[i].GetComponent<Rigidbody>().AddForce(direction * force);
         }
     }
-
+    public void SetForceAllIfSlowerThanThereshold(Vector3 direction, float force, float velocityThereshold)
+    {
+        for (int i = 0; i < bodiesToAttract.Length; i++)
+        {
+            Rigidbody body = bodiesToAttract[i].GetComponent<Rigidbody>();
+            if (body.velocity.sqrMagnitude < velocityThereshold * velocityThereshold)
+                body.AddForce(direction * force);
+        }
+    }
     public void Freeze()
     {
         for (int i = 0; i < bodiesToAttract.Length; i++)
