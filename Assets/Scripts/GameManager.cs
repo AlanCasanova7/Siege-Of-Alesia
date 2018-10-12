@@ -80,6 +80,12 @@ public class GameManager : MonoBehaviour
     {
         if (CurrentState == FightState.SelectionPhase && Player1ReadyStatus.Value && Player2ReadyStatus.Value)
             StartFightPhase();
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            IntroductionOver();
+            Debug.Log("REMOVE ME");
+        }
     }
 
     internal void CallGameOver(Player winningPlayer)

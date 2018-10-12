@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826689bcb6aa64348b511b4ad2214df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToSwitchTo: SampleScene
+  SceneToSwitchTo: GameScene
 --- !u!114 &506653706
 MonoBehaviour:
   m_ObjectHideFlags: 0

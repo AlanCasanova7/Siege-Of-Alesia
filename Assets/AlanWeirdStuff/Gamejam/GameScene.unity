@@ -9779,8 +9779,8 @@ MonoBehaviour:
   - Key: 108
     Attack: {fileID: 11400000, guid: 4600934d506bd1347bd40783a198ce12, type: 2}
     AnimationManager: {fileID: 777431017}
-  Population: {fileID: 11400000, guid: 8989223618cc7664885f337e807f264d, type: 2}
-  Fervor: {fileID: 11400000, guid: 4b16a8c78090cd04589243ab180e1815, type: 2}
+  Population: {fileID: 11400000, guid: 4b16a8c78090cd04589243ab180e1815, type: 2}
+  Fervor: {fileID: 11400000, guid: 8989223618cc7664885f337e807f264d, type: 2}
   maxChosenAttacks: 3
   RecordInput: 0
 --- !u!114 &777431017
@@ -10067,7 +10067,7 @@ Prefab:
     - target: {fileID: 224254410764303058, guid: c90908a0d27c720408d460b1bc602c3d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224254410764303058, guid: c90908a0d27c720408d460b1bc602c3d,
         type: 2}
@@ -10119,6 +10119,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 224579688522100648, guid: c90908a0d27c720408d460b1bc602c3d,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114122644877066688, guid: c90908a0d27c720408d460b1bc602c3d,
+        type: 2}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 626346894}
+    - target: {fileID: 114142121937616604, guid: c90908a0d27c720408d460b1bc602c3d,
+        type: 2}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 626346894}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c90908a0d27c720408d460b1bc602c3d, type: 2}
   m_IsPrefabAsset: 0
@@ -10662,7 +10677,7 @@ Prefab:
     - target: {fileID: 224283022821071602, guid: 89c0ab662abc57d4a9f9c53a0da91cbe,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224283022821071602, guid: 89c0ab662abc57d4a9f9c53a0da91cbe,
         type: 2}
@@ -10960,7 +10975,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4379258616553272, guid: 57c1f46ab53980e4a810c2d520fd68ca, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114015728261095118, guid: 57c1f46ab53980e4a810c2d520fd68ca,
         type: 2}
@@ -11075,6 +11090,21 @@ Prefab:
     - target: {fileID: 224137904244274814, guid: 3be1aceeee02004498cef76b0b0dab18,
         type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224461688585633300, guid: 3be1aceeee02004498cef76b0b0dab18,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224461688585633300, guid: 3be1aceeee02004498cef76b0b0dab18,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224461688585633300, guid: 3be1aceeee02004498cef76b0b0dab18,
+        type: 2}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
