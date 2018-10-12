@@ -61,7 +61,10 @@ public abstract class AttackAnimation : MonoBehaviour
 
         populationManager.StartRegrouping(regroupPositions);
         if (OnGroupingEffect)
+        {
+            OnGroupingEffect.time = 0f;
             OnGroupingEffect.Play();
+        }
     }
 
     public virtual void FinalAnimation()
