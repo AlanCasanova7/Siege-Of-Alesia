@@ -146,7 +146,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -327}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &266445267
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Alan Casanova (Programmer)
 --- !u!222 &266445268
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -221,7 +221,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -297}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &297539247
 MonoBehaviour:
@@ -255,7 +255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Sergio Ambrosini (Programmer)
 --- !u!222 &297539248
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -208.1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &491347001
 MonoBehaviour:
@@ -529,7 +529,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Luciano Laudani (Artist)
 --- !u!222 &491347002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -570,7 +570,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -238.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &522488109
 MonoBehaviour:
@@ -604,7 +604,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Mattia Lo Presti (Artist)
 --- !u!222 &522488110
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2c453c73e54aeb04884e43dab8d61036, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -776,7 +776,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -87.3}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &734870687
 MonoBehaviour:
@@ -810,7 +810,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Roberto Pavan (Designer)
 --- !u!222 &734870688
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1094,7 +1094,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -149.7}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1206180816
 MonoBehaviour:
@@ -1128,7 +1128,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Lorenzo Giardinelli (Designer)
 --- !u!222 &1206180817
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1634,7 +1634,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -179.1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1815160911
 MonoBehaviour:
@@ -1668,7 +1668,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Antonio Circelli (Artist)
 --- !u!222 &1815160912
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1709,7 +1709,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -357.3}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1903301050
 MonoBehaviour:
@@ -1743,7 +1743,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Mario Manna (Music)
 --- !u!222 &1903301051
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1861,7 +1861,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -118.3}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2083684298
 MonoBehaviour:
@@ -1895,7 +1895,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Simone Cicchetti (Designer)
 --- !u!222 &2083684299
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1936,7 +1936,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -269.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2117773447
 MonoBehaviour:
@@ -1970,7 +1970,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Matteo Nasci (Programmer)
 --- !u!222 &2117773448
 CanvasRenderer:
   m_ObjectHideFlags: 0
