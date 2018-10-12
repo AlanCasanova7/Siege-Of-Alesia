@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public UnityEvent FightPhaseStarted;
     public UnityEvent GameOver;
 
+    public GameResult GameOverResults;
+
     public FightState CurrentState { get; private set; }
 
     public BooleanValue Player1ReadyStatus;
@@ -29,6 +31,11 @@ public class GameManager : MonoBehaviour
     {
         this.StartSelectionPhase();
     }
+    private void Start()
+    {
+        GameOverResults.Reset();
+        GameOverResults.TotalTime = Time.time;
+    }
 
     private void Update()
     {
@@ -39,8 +46,11 @@ public class GameManager : MonoBehaviour
     internal void CallGameOver(Player winningPlayer)
     {
         WinningPlayer = winningPlayer;
+        GameOverResults.IndexWinner = WinningPlayer.Index;
+        GameOverResults.FervorWinner = WinningPlayer.Fervor.Value;
+        GameOverResults.PopulationWinner = WinningPlayer.Population.Value;
+        GameOverResults.TotalTime = Time.time - GameOverResults.TotalTime;
         GameOver.Invoke();
-        Debug.Log("GAME OVER");
         this.enabled = false;
         CurrentState = FightState.GameOver;
     }
@@ -63,7 +73,6 @@ public class GameManager : MonoBehaviour
 
     private void StartSelectionPhase()
     {
-        Debug.Log("Start Selection");
         CurrentState = FightState.SelectionPhase;
         Player1ReadyStatus.Value = false;
         Player2ReadyStatus.Value = false;
@@ -71,8 +80,8 @@ public class GameManager : MonoBehaviour
     }
     private void StartFightPhase()
     {
-        Debug.Log("Start Fight");
         CurrentState = FightState.ConfrontState;
+        GameOverResults.TotalGameTurns++;
         FightPhaseStarted.Invoke();
     }
 }

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd1ddb11d2d56d04e931971be73e3881, type: 3}
+  m_Name: GameOverResults
+  m_EditorClassIdentifier: 
+  IndexWinner: -1
+  FervorWinner: 0
+  PopulationWinner: 0
+  TotalGameTurns: 0
+  TotalTime: 0
