@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class AttackAnimation : MonoBehaviour
 {
+    public string triggerName;
+
     public Transform[] RegroupPoints;
     [SerializeField]
     protected Vector3[] regroupPositions;

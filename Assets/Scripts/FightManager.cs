@@ -67,7 +67,11 @@ public class FightManager : MonoBehaviour
         }
 
         anim1.StartAnimation(Attack1EndStatus);
+        //Player1.GetComponent<Animator>().SetTrigger(anim1.triggerName);
+
         anim2.StartAnimation(Attack2EndStatus);
+        //Player2.GetComponent<Animator>().SetTrigger(anim2.triggerName);
+
 
         result1.Reset();
         result2.Reset();
