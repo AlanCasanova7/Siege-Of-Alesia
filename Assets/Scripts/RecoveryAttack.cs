@@ -8,6 +8,7 @@ public class RecoveryAttack : AttackAnimation
         if (OnGroupingEffect)
             OnGroupingEffect.Play();
         populationManager.StartFakeRegrouping();
+        FinalAnimation();
     }
     protected override void Update()
     {

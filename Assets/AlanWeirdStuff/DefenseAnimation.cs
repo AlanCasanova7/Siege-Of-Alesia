@@ -3,6 +3,7 @@
 public class DefenseAnimation : AttackAnimation
 {
     public GameObject ToTest;
+    public timedCollider collider;
 
     public Vector3 offset;
     public float size;
@@ -22,6 +23,12 @@ public class DefenseAnimation : AttackAnimation
             return;
         populationManager.Freeze();
         base.FinalAnimation();
+    }
+
+    public override void StartAnimation()
+    {
+        base.StartAnimation();
+        collider.Activation();
     }
 
     private void OnValidate()
