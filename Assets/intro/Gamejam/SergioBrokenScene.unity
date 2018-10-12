@@ -511,11 +511,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 93fc8428cd393f54195ead3241e9862e, type: 3}
-    m_FontSize: 16
+    m_FontSize: 300
     m_FontStyle: 2
     m_BestFit: 1
     m_MinSize: 1
-    m_MaxSize: 100
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 0
@@ -742,11 +742,11 @@ MonoBehaviour:
   - 15
   - 20
   - 30
-  - 38
+  - 33
   - 46
   - 59
   - 62
-  - 70
+  - 63
   TextsIntro:
   - September, 52 b.C.
   - Tanslpine Gaul
