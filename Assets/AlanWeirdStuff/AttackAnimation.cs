@@ -6,6 +6,9 @@ public abstract class AttackAnimation : MonoBehaviour
 {
     public string triggerName;
 
+    public AudioClip[] SoundsStarts;
+    public AudioClip[] SoundsEnd;
+    public AudioSource Source;
     public ParticleSystem OnGroupingEffect;
     public ParticleSystem OnFinalAnimEffect;
 
@@ -47,6 +50,15 @@ public abstract class AttackAnimation : MonoBehaviour
     }
     public virtual void StartAnimation()
     {
+        if (SoundsStarts.Length > 0)
+        {
+
+            AudioClip start = SoundsStarts[Random.Range(0, SoundsStarts.Length)];
+            Source.clip = start;
+            Source.time = 0f;
+            Source.Play();
+        }
+
         populationManager.StartRegrouping(regroupPositions);
         if (OnGroupingEffect)
             OnGroupingEffect.Play();
@@ -54,7 +66,13 @@ public abstract class AttackAnimation : MonoBehaviour
 
     public virtual void FinalAnimation()
     {
-        Debug.Log(triggerName + " " + this.transform.root.name);
+        if (SoundsEnd.Length > 0)
+        {
+            AudioClip start = SoundsEnd[Random.Range(0, SoundsEnd.Length)];
+            Source.clip = start;
+            Source.time = 0f;
+            Source.Play();
+        }
 
         if (!endAnim)
             return;
