@@ -8,12 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 791f7a14589de914eabd9e563123bdd0, type: 3}
-  m_Name: PopulationP2
+  m_Script: {fileID: 11500000, guid: dd1ddb11d2d56d04e931971be73e3881, type: 3}
+  m_Name: GameOverResults
   m_EditorClassIdentifier: 
-  min: 0
-  max: 200
-  value: 200
-  resetOnCreation: 1
-  resetValue: 2147483647
-  description: Population in game for player 2
+  IndexWinner: -1
+  FervorWinner: 0
+  PopulationWinner: 0
+  TotalGameTurns: 0
+  TotalTime: 0

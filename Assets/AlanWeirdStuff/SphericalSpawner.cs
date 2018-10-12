@@ -514,8 +514,8 @@ public class IcosahedronGenerator : ScriptableObject
             }
         }
 
-        Debug.Log("Vertice Count: " + verticeHash.Count);
-        Debug.Log("Polygon Count: " + polygonCount);
+        //Debug.Log("Vertice Count: " + verticeHash.Count);
+        //Debug.Log("Polygon Count: " + polygonCount);
 
         return;
     }

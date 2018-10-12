@@ -18,16 +18,52 @@ public class GameManager : MonoBehaviour
     public UnityEvent FightPhaseStarted;
     public UnityEvent GameOver;
 
+    public GameResult GameOverResults;
+
     public FightState CurrentState { get; private set; }
 
     public BooleanValue Player1ReadyStatus;
     public BooleanValue Player2ReadyStatus;
 
-    public Player WinningPlayer;
+    public Player Player1;
+    public Player Player2;
+
+    [SerializeField]
+    private IntValue[] intValuesToReset;
+    [SerializeField]
+    private BooleanValue[] boolValuesToReset;
+    [SerializeField]
+    private FloatValue[] floatValuesToReset;
 
     private void OnEnable()
     {
         this.StartSelectionPhase();
+    }
+    private void Start()
+    {
+        GameOverResults.Reset();
+        if (intValuesToReset != null)
+        {
+            for (int i = 0; i < intValuesToReset.Length; i++)
+            {
+                intValuesToReset[i].OnEnable();
+            }
+        }
+        if (boolValuesToReset != null)
+        {
+            for (int i = 0; i < boolValuesToReset.Length; i++)
+            {
+                boolValuesToReset[i].OnEnable();
+            }
+        }
+        if (floatValuesToReset != null)
+        {
+            for (int i = 0; i < floatValuesToReset.Length; i++)
+            {
+                floatValuesToReset[i].OnEnable();
+            }
+        }
+        GameOverResults.TotalTime = Time.time;
     }
 
     private void Update()
@@ -38,9 +74,11 @@ public class GameManager : MonoBehaviour
 
     internal void CallGameOver(Player winningPlayer)
     {
-        WinningPlayer = winningPlayer;
+        GameOverResults.IndexWinner = winningPlayer.Index;
+        GameOverResults.FervorWinner = winningPlayer.Fervor.Value;
+        GameOverResults.PopulationWinner = winningPlayer.Population.Value;
+        GameOverResults.TotalTime = Time.time - GameOverResults.TotalTime;
         GameOver.Invoke();
-        Debug.Log("GAME OVER");
         this.enabled = false;
         CurrentState = FightState.GameOver;
     }
@@ -63,7 +101,16 @@ public class GameManager : MonoBehaviour
 
     private void StartSelectionPhase()
     {
-        Debug.Log("Start Selection");
+        if (Player1.Population.Value <= 0)
+        {
+            CallGameOver(Player2);
+            return;
+        }
+        if (Player2.Population.Value <= 0)
+        {
+            CallGameOver(Player1);
+            return;
+        }
         CurrentState = FightState.SelectionPhase;
         Player1ReadyStatus.Value = false;
         Player2ReadyStatus.Value = false;
@@ -71,8 +118,8 @@ public class GameManager : MonoBehaviour
     }
     private void StartFightPhase()
     {
-        Debug.Log("Start Fight");
         CurrentState = FightState.ConfrontState;
+        GameOverResults.TotalGameTurns++;
         FightPhaseStarted.Invoke();
     }
 }

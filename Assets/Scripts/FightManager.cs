@@ -31,7 +31,6 @@ public class FightManager : MonoBehaviour
             reporter1.DmgReceived(result1.ReceivedDamage);
             Player1.Population.Value -= result1.ReceivedDamage;
         }
-        Debug.Log(Player1.Population.Value);
     }
     public void FinishDamageExecutionP2()
     {
@@ -40,7 +39,6 @@ public class FightManager : MonoBehaviour
             reporter2.DmgReceived(result2.ReceivedDamage);
             Player2.Population.Value -= result2.ReceivedDamage;
         }
-        Debug.Log(Player2.Population.Value);
     }
     public void ResolveAttack()
     {

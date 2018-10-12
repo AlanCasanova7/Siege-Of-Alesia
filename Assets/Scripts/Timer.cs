@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
     void OnEnable()
     {
         timer = 0f;
-        Debug.Log("Timer restarted");
+
         if (!CurrentTimer || !Duration)
             throw new NullReferenceException("Timer requires non null FloatValues references.");
 
