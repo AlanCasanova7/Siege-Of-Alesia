@@ -2,6 +2,8 @@
 
 public class DefenseAnimation : AttackAnimation
 {
+    public GameObject ToTest;
+
     public Vector3 offset;
     public float size;
     public int numberOfPositions;
@@ -49,6 +51,11 @@ public class DefenseAnimation : AttackAnimation
                 {
                     Vector3 v = new Vector3(startingPoint.x, startingPoint.y + (i * spacing), startingPoint.z + (j * spacing));
                     customVectors[(i * numberOfPositions) + j] = v;
+                    if(ToTest != null)
+                    {
+                        GameObject go = Instantiate(ToTest, this.transform);
+                        go.transform.position = v;
+                    }
                 }
             }
 
