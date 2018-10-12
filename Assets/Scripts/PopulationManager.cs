@@ -9,7 +9,7 @@ public class PopulationManager : MonoBehaviour
     public UnityEvent regroupingFinished;
 
     private AttractTo[] bodiesToAttract;
-    public float stageCooldown = 5f;
+    public float stageCooldown = 3f;
     private bool regrouping;
 
     //private Vector3[] regroupPositions;
@@ -54,7 +54,7 @@ public class PopulationManager : MonoBehaviour
     public void StartFakeRegrouping()
     {
         regrouping = true;
-        stageCooldown = 5f;
+        stageCooldown = 3f;
     }
     public void StartRegrouping(Vector3[] regroupPositions, float regroupForce = 200)
     {
@@ -65,7 +65,7 @@ public class PopulationManager : MonoBehaviour
         //    this.regroupPositions[i] = regroupPositions[i];
         //}
         regrouping = true;
-        stageCooldown = 5f;
+        stageCooldown = 3f;
         //animationHandler = owner;
         for (int i = 0; i < bodiesToAttract.Length; i++)
         {
