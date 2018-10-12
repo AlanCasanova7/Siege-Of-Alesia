@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 0
   max: 200
-  value: 0
+  value: 200
   resetOnCreation: 1
   resetValue: 2147483647
   description: Population in game for player 1
