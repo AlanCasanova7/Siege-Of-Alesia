@@ -13,7 +13,8 @@ public class OnCollisionEffect : MonoBehaviour
     {
         if (Random.Range(0, 101) < Percentage)
         {
-            GameObject.Instantiate(Effect, this.transform);
+            Effect.time = 0f;
+            Effect.Play();
             AudioClip start = Sounds[Random.Range(0, Sounds.Length)];
             EffectSource.clip = start;
             EffectSource.time = 0f;
