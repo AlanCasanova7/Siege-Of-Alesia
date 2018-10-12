@@ -15,6 +15,8 @@ public class OnCollisionEffect : MonoBehaviour
         {
             Effect.time = 0f;
             Effect.Play();
+            if (EffectSource.isPlaying)
+                return;
             AudioClip start = Sounds[Random.Range(0, Sounds.Length)];
             EffectSource.clip = start;
             EffectSource.time = 0f;
