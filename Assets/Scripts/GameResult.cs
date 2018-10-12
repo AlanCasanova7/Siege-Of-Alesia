@@ -9,7 +9,7 @@ public class GameResult : ScriptableObject
     public float TotalTime = 0f;
     public void Reset()
     {
-        IndexWinner = -1;
+        IndexWinner = 0;
         FervorWinner = 0;
         PopulationWinner = 0;
         TotalGameTurns = 0;
