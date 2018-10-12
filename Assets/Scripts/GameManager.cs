@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public enum FightState
 {
-    Introduction,
+    //Introduction,
     SelectionPhase,
     ConfrontState,
     GameOver,
@@ -36,15 +36,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private FloatValue[] floatValuesToReset;
 
-    private void Awake()
-    {
-        CurrentState = FightState.Introduction;
-    }
-    private void OnEnable()
-    {
-        if (CurrentState != FightState.Introduction)
-            this.StartSelectionPhase();
-    }
+
+
     private void Start()
     {
         GameOverResults.Reset();
@@ -70,22 +63,13 @@ public class GameManager : MonoBehaviour
             }
         }
         GameOverResults.TotalTime = Time.time;
+        this.StartSelectionPhase();
     }
-    public void IntroductionOver()
-    {
-        if (CurrentState == FightState.Introduction)
-            StartSelectionPhase();
-    }
+
     private void Update()
     {
         if (CurrentState == FightState.SelectionPhase && Player1ReadyStatus.Value && Player2ReadyStatus.Value)
             StartFightPhase();
-
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            IntroductionOver();
-            Debug.Log("REMOVE ME");
-        }
     }
 
     internal void CallGameOver(Player winningPlayer)

@@ -11,10 +11,11 @@ public class CardLogic : MonoBehaviour
 
     public Color ChoosedCardColor;
     public Color DefaultCardColor;
-    
+    public Color NonTransparent;
+
     public void ShowChoosedCard(Sprite sprite)
     {
-        BG_Image.color = DefaultCardColor;
+        BG_Image.color = NonTransparent;
         BG_Image.sprite = sprite;
         Cover_Image.enabled = false;
         Number_Image.enabled = false;

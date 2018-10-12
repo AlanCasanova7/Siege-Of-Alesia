@@ -685,8 +685,8 @@ MonoBehaviour:
   Timer5: 21
   Timer6: 25
   Timer7: 32
-  Timer8: 45
-  Timer9: 60
+  Timer8: 38
+  Timer9: 50
   CameraPosition1: {fileID: 365780720}
   CameraPosition2: {fileID: 1381280629}
   CameraPosition3: {fileID: 1155993299}

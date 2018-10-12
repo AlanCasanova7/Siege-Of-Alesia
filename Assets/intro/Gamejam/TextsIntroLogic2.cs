@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TextsIntroLogic2 : MonoBehaviour
@@ -69,6 +70,11 @@ public class TextsIntroLogic2 : MonoBehaviour
         else if (time > timers[8] && time < timers[9])
         {
             text.text = TextsIntro[9];
+
+        }
+        else
+        {
+            SceneManager.LoadScene("StartScene");
         }
     }
 }
