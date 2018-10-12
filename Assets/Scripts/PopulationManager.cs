@@ -58,7 +58,6 @@ public class PopulationManager : MonoBehaviour
     }
     public void StartRegrouping(Vector3[] regroupPositions, float regroupForce = 750)
     {
-        Debug.Log(this.gameObject.transform.root.name);
 
         //for (int i = 0; i < regroupPositions.Length; i++)
         //{
