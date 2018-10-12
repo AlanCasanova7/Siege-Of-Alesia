@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Defense
   m_EditorClassIdentifier: 
   FervorValues: {fileID: 11400000, guid: 2ecc98bca6f764743b84fa13813848ad, type: 2}
-  Image: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  Image: {fileID: 21300000, guid: f587214faca23ca4c9b8cd65ff70f7ce, type: 3}
   attName: Defense
   Cost: 2
   Damage: 0
