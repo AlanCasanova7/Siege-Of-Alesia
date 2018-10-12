@@ -1,0 +1,317 @@
+fileFormatVersion: 2
+guid: 03e8df3c13cd53b4f949c4143a81fc33
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature_001
+    100002: Armature_004
+    100004: Beard
+    100006: Body
+    100008: Bone
+    100010: Bone_0
+    100012: Bone_001
+    100014: Bone_002
+    100016: Bone_003
+    100018: Bone_004
+    100020: Bone_005
+    100022: Bone_006
+    100024: Bone_007
+    100026: Bone_008
+    100028: Bone_009
+    100030: Bone_010
+    100032: Bone_011
+    100034: Bone_012
+    100036: Bone_013
+    100038: Bone_014
+    100040: Bone_015
+    100042: Bone_016
+    100044: Bone_017
+    100046: Bone_018
+    100048: Bone_019
+    100050: Bone_020
+    100052: Bone_021
+    100054: Bone_022
+    100056: Bone_023
+    100058: Bone_024
+    100060: Bone_025
+    100062: Bone_026
+    100064: Bone_027
+    100066: Bone_028
+    100068: Bone_029
+    100070: Bone_030
+    100072: Bone_031
+    100074: Bone_032
+    100076: Bone_033
+    100078: Bone_034
+    100080: Bone_035
+    100082: Bone_036
+    100084: Bone_037
+    100086: Bone_038
+    100088: Bone_039
+    100090: Bone_040
+    100092: Elmet
+    100094: Eye_Effort
+    100096: Eye_Hit
+    100098: Eye_Idle
+    100100: Eye_Idle_0
+    100102: Eye_Idle_001
+    100104: Eye_Idle_002
+    100106: Eye_Idle_003
+    100108: Eye_Idle_004
+    100110: Eye_Idle_005
+    100112: Eye_Joy
+    100114: Eye_Sad
+    100116: Eyepatch
+    100118: Hand_L
+    100120: Hand_R
+    100122: Head
+    100124: Horns
+    100126: Mantel
+    100128: MantelFur
+    100130: Mustache
+    100132: Plane_005
+    100134: //RootNode
+    400000: Armature_001
+    400002: Armature_004
+    400004: Beard
+    400006: Body
+    400008: Bone
+    400010: Bone_0
+    400012: Bone_001
+    400014: Bone_002
+    400016: Bone_003
+    400018: Bone_004
+    400020: Bone_005
+    400022: Bone_006
+    400024: Bone_007
+    400026: Bone_008
+    400028: Bone_009
+    400030: Bone_010
+    400032: Bone_011
+    400034: Bone_012
+    400036: Bone_013
+    400038: Bone_014
+    400040: Bone_015
+    400042: Bone_016
+    400044: Bone_017
+    400046: Bone_018
+    400048: Bone_019
+    400050: Bone_020
+    400052: Bone_021
+    400054: Bone_022
+    400056: Bone_023
+    400058: Bone_024
+    400060: Bone_025
+    400062: Bone_026
+    400064: Bone_027
+    400066: Bone_028
+    400068: Bone_029
+    400070: Bone_030
+    400072: Bone_031
+    400074: Bone_032
+    400076: Bone_033
+    400078: Bone_034
+    400080: Bone_035
+    400082: Bone_036
+    400084: Bone_037
+    400086: Bone_038
+    400088: Bone_039
+    400090: Bone_040
+    400092: Elmet
+    400094: Eye_Effort
+    400096: Eye_Hit
+    400098: Eye_Idle
+    400100: Eye_Idle_0
+    400102: Eye_Idle_001
+    400104: Eye_Idle_002
+    400106: Eye_Idle_003
+    400108: Eye_Idle_004
+    400110: Eye_Idle_005
+    400112: Eye_Joy
+    400114: Eye_Sad
+    400116: Eyepatch
+    400118: Hand_L
+    400120: Hand_R
+    400122: Head
+    400124: Horns
+    400126: Mantel
+    400128: MantelFur
+    400130: Mustache
+    400132: Plane_005
+    400134: //RootNode
+    2100000: Rudianos_Eye_Sad__GallicGod
+    2100002: Rudianos_Eye_Hit__GallicGod
+    2100004: Rudianos_Eye_Happy__GallicGod
+    2100006: Rudianos_Eye_Effort__GallicGod
+    2100008: None__GallicGod
+    2100010: Rudianos_Eyepatch__GallicGod
+    2100012: Rudianos_Body__GallicGod
+    2100014: Rudianos_Eye_Idle__GallicGod
+    2300000: Eye_Idle
+    3300000: Eye_Idle
+    4300000: Eye_Idle_005
+    4300002: Eye_Idle_004
+    4300004: Eye_Idle_003
+    4300006: Eye_Idle_002
+    4300008: Plane_005
+    4300010: Eyepatch
+    4300012: Hand_L
+    4300014: Mantel
+    4300016: Body
+    4300018: Elmet
+    4300020: Head
+    4300022: MantelFur
+    4300024: Mustache
+    4300026: Beard
+    4300028: Horns
+    4300030: Hand_R
+    4300032: Eye_Idle_001
+    4300034: Eye_Idle
+    7400000: Default Take
+    7400002: Atk
+    7400004: Def
+    7400006: Fav
+    7400008: Idle
+    7400010: Rec
+    9500000: //RootNode
+    13700000: Beard
+    13700002: Body
+    13700004: Elmet
+    13700006: Eye_Idle_001
+    13700008: Eye_Idle_002
+    13700010: Eye_Idle_003
+    13700012: Eye_Idle_004
+    13700014: Eye_Idle_005
+    13700016: Eyepatch
+    13700018: Hand_L
+    13700020: Hand_R
+    13700022: Head
+    13700024: Horns
+    13700026: Mantel
+    13700028: MantelFur
+    13700030: Mustache
+    13700032: Plane_005
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__GallicGod
+    second: {fileID: 2100000, guid: 826c4efe5633ad64c927d82508ff588d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rudianos_Body__GallicGod
+    second: {fileID: 2100000, guid: b7dd222861c344047837c624fcb58cd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rudianos_Eye_Effort__GallicGod
+    second: {fileID: 2100000, guid: c4d00083e7c0fbf479a1b76c56d1aa03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rudianos_Eye_Happy__GallicGod
+    second: {fileID: 2100000, guid: e2897f51dbfd74f4b9a1c77ac6b33e5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rudianos_Eye_Hit__GallicGod
+    second: {fileID: 2100000, guid: 23f75697a597b444b9efaeb790127fd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rudianos_Eye_Idle__GallicGod
+    second: {fileID: 2100000, guid: bb0833da289a9ea4e994dfd1be537b57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rudianos_Eye_Sad__GallicGod
+    second: {fileID: 2100000, guid: 00117eb9666df104aacaccb38f986191, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rudianos_Eyepatch__GallicGod
+    second: {fileID: 2100000, guid: ee78c146c2133f6469174dbab627e233, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
