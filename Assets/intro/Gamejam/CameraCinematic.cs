@@ -23,10 +23,10 @@ public class CameraCinematic : MonoBehaviour
     float Speed3 = 0.6f;
     float Speed4 = 0.8f;
     float Speed5 = 1f;
-    float Speed6 = 1.3f;
-    float Speed7 = 1.6f;
-    float Speed8 = 1.9f;
-    float Speed9 = 2.4f;
+    //float Speed6 = 1.3f;
+    //float Speed7 = 1.6f;
+    //float Speed8 = 1.9f;
+    //float Speed9 = 2.4f;
     float Speed10 = 3f;
 
     public Transform CameraPosition1;

@@ -3,7 +3,7 @@
 public class DefenseAnimation : AttackAnimation
 {
     public GameObject ToTest;
-    public timedCollider collider;
+    public timedCollider wallActivator;
 
     public Vector3 offset;
     public float size;
@@ -28,7 +28,7 @@ public class DefenseAnimation : AttackAnimation
     public override void StartAnimation()
     {
         base.StartAnimation();
-        collider.Activation();
+        wallActivator.Activation();
     }
 
     private void OnValidate()

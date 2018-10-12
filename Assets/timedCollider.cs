@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class timedCollider : MonoBehaviour
 {
-    public BoxCollider collider;
+    public BoxCollider bCollider;
 
     public float TTime;
     private float currentTime;
@@ -14,7 +14,7 @@ public class timedCollider : MonoBehaviour
     public void Activation()
     {
         currentTime = TTime;
-        collider.enabled = true;
+        bCollider.enabled = true;
 
         privateTimer = 0;
     }
@@ -30,7 +30,7 @@ public class timedCollider : MonoBehaviour
         currentTime -= Time.deltaTime;
         if(currentTime <= 0)
         {
-            collider.enabled = false;
+            bCollider.enabled = false;
         }
     }
 }
