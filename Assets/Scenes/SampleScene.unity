@@ -113611,9 +113611,24 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  GameOverResults: {fileID: 11400000, guid: 1771e5ec153d04344a126adb223a580d, type: 2}
   Player1ReadyStatus: {fileID: 11400000, guid: d3f0515219e632b4e8190f340b209d8a, type: 2}
   Player2ReadyStatus: {fileID: 11400000, guid: e1b064339f88ce44db11aa3847c24542, type: 2}
-  WinningPlayer: {fileID: 0}
+  Player1: {fileID: 574074211}
+  Player2: {fileID: 582778495}
+  intValuesToReset:
+  - {fileID: 11400000, guid: abf5f6b63ac991b4699d19fa0aab823a, type: 2}
+  - {fileID: 11400000, guid: 8989223618cc7664885f337e807f264d, type: 2}
+  - {fileID: 11400000, guid: 888582bb10ac7474e85dd2bfaab9c7a5, type: 2}
+  - {fileID: 11400000, guid: 4b16a8c78090cd04589243ab180e1815, type: 2}
+  boolValuesToReset:
+  - {fileID: 11400000, guid: f533c3354b41db746ada60b65a55d82d, type: 2}
+  - {fileID: 11400000, guid: 42557c8787299e146b60dd8e426e092e, type: 2}
+  - {fileID: 11400000, guid: d3f0515219e632b4e8190f340b209d8a, type: 2}
+  - {fileID: 11400000, guid: e1b064339f88ce44db11aa3847c24542, type: 2}
+  floatValuesToReset:
+  - {fileID: 11400000, guid: 0077628c29a6b114aa0960716af84386, type: 2}
+  - {fileID: 11400000, guid: 7bcd8e09dab0b6b42b86971f88c27d91, type: 2}
 --- !u!4 &2059075321
 Transform:
   m_ObjectHideFlags: 0

@@ -25,7 +25,15 @@ public class GameManager : MonoBehaviour
     public BooleanValue Player1ReadyStatus;
     public BooleanValue Player2ReadyStatus;
 
-    public Player WinningPlayer;
+    public Player Player1;
+    public Player Player2;
+
+    [SerializeField]
+    private IntValue[] intValuesToReset;
+    [SerializeField]
+    private BooleanValue[] boolValuesToReset;
+    [SerializeField]
+    private FloatValue[] floatValuesToReset;
 
     private void OnEnable()
     {
@@ -34,6 +42,27 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         GameOverResults.Reset();
+        if (intValuesToReset != null)
+        {
+            for (int i = 0; i < intValuesToReset.Length; i++)
+            {
+                intValuesToReset[i].OnEnable();
+            }
+        }
+        if (boolValuesToReset != null)
+        {
+            for (int i = 0; i < boolValuesToReset.Length; i++)
+            {
+                boolValuesToReset[i].OnEnable();
+            }
+        }
+        if (floatValuesToReset != null)
+        {
+            for (int i = 0; i < floatValuesToReset.Length; i++)
+            {
+                floatValuesToReset[i].OnEnable();
+            }
+        }
         GameOverResults.TotalTime = Time.time;
     }
 
@@ -45,10 +74,9 @@ public class GameManager : MonoBehaviour
 
     internal void CallGameOver(Player winningPlayer)
     {
-        WinningPlayer = winningPlayer;
-        GameOverResults.IndexWinner = WinningPlayer.Index;
-        GameOverResults.FervorWinner = WinningPlayer.Fervor.Value;
-        GameOverResults.PopulationWinner = WinningPlayer.Population.Value;
+        GameOverResults.IndexWinner = winningPlayer.Index;
+        GameOverResults.FervorWinner = winningPlayer.Fervor.Value;
+        GameOverResults.PopulationWinner = winningPlayer.Population.Value;
         GameOverResults.TotalTime = Time.time - GameOverResults.TotalTime;
         GameOver.Invoke();
         this.enabled = false;
@@ -73,6 +101,16 @@ public class GameManager : MonoBehaviour
 
     private void StartSelectionPhase()
     {
+        if (Player1.Population.Value <= 0)
+        {
+            CallGameOver(Player2);
+            return;
+        }
+        if (Player2.Population.Value <= 0)
+        {
+            CallGameOver(Player1);
+            return;
+        }
         CurrentState = FightState.SelectionPhase;
         Player1ReadyStatus.Value = false;
         Player2ReadyStatus.Value = false;

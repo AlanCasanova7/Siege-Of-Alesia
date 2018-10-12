@@ -43,7 +43,7 @@ public class AttractInside : MonoBehaviour
     public void CollectBodies()
     {
         Vector3 pos;
-        if (tr = null)
+        if (tr == null)
         {
             pos = this.transform.position;
         }

@@ -21,7 +21,7 @@ public class IntValue : ScriptableObject
     [TextArea(3, 5)]
     private string description;
 
-    private void OnEnable()
+    public void OnEnable()
     {
         if (resetOnCreation)
             Value = resetValue;
