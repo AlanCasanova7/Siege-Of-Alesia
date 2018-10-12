@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Alan Casanova (Programmer)
+  m_Text: Alan Casanova -Programmer-
 --- !u!222 &266445268
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sergio Ambrosini (Programmer)
+  m_Text: Sergio Ambrosini -Programmer-
 --- !u!222 &297539248
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -529,7 +529,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Luciano Laudani (Artist)
+  m_Text: Luciano Laudani -Artist-
 --- !u!222 &491347002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -604,7 +604,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mattia Lo Presti (Artist)
+  m_Text: Mattia Lo Presti -Artist-
 --- !u!222 &522488110
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -810,7 +810,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Roberto Pavan (Designer)
+  m_Text: Roberto Pavan -Designer-
 --- !u!222 &734870688
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1128,7 +1128,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorenzo Giardinelli (Designer)
+  m_Text: Lorenzo Giardinelli -Designer-
 --- !u!222 &1206180817
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1668,7 +1668,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Antonio Circelli (Artist)
+  m_Text: Antonio Circelli -Artist-
 --- !u!222 &1815160912
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1743,7 +1743,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mario Manna (Music)
+  m_Text: Mario Manna -Music-
 --- !u!222 &1903301051
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1895,7 +1895,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Simone Cicchetti (Designer)
+  m_Text: Simone Cicchetti -Designer-
 --- !u!222 &2083684299
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1970,7 +1970,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Matteo Nasci (Programmer)
+  m_Text: Matteo Nasci -Programmer-
 --- !u!222 &2117773448
 CanvasRenderer:
   m_ObjectHideFlags: 0
