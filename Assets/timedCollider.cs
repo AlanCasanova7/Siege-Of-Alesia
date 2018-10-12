@@ -14,7 +14,6 @@ public class timedCollider : MonoBehaviour
     public void Activation()
     {
         currentTime = TTime;
-        bCollider.enabled = true;
 
         privateTimer = 0;
     }
@@ -26,6 +25,8 @@ public class timedCollider : MonoBehaviour
             privateTimer += Time.deltaTime;
             return;
         }
+
+        bCollider.enabled = true;
 
         currentTime -= Time.deltaTime;
         if(currentTime <= 0)
