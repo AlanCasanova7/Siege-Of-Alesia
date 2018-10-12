@@ -54,6 +54,8 @@ public abstract class AttackAnimation : MonoBehaviour
 
     public virtual void FinalAnimation()
     {
+        Debug.Log(triggerName + " " + this.transform.root.name);
+
         if (!endAnim)
             return;
         if (OnFinalAnimEffect)

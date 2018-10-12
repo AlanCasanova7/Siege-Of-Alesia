@@ -6,8 +6,6 @@ public class BulletAttack : AttackAnimation
 
     public override void FinalAnimation()
     {
-        Debug.Log("ATTACK");
-
         if (!endAnim)
             return;
         base.FinalAnimation();
