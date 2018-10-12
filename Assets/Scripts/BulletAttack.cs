@@ -12,6 +12,8 @@ public class BulletAttack : AttackAnimation
             return;
         base.FinalAnimation();
 
+        Debug.Log(regroupPositions[0] + this.transform.root.name);
+
         populationManager.SetForceAll(this.target.position - this.regroupPositions[0], Force);
 
     }
