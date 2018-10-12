@@ -2,6 +2,7 @@
 public class BulletAttack : AttackAnimation
 {
     public float Force = 5000f;
+    public Transform target;
 
     public override void FinalAnimation()
     {
@@ -9,7 +10,7 @@ public class BulletAttack : AttackAnimation
             return;
         base.FinalAnimation();
 
-        populationManager.SetForceAll(this.transform.forward, Force);
+        populationManager.SetForceAll(this.target.position - this.regroupPositions[0], Force);
     }
     //private void OnValidate()
     //{
